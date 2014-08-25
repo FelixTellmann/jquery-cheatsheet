@@ -1,0 +1,5 @@
+#!/usr/bin/env php
+
+<?php
+require 'bootstrap.php';
+require 'sources/console.php';

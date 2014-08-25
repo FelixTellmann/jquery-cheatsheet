@@ -1,0 +1,16 @@
+{
+	"name": "jquery-cheat-sheet",
+	"version": "1.0",
+	"authors": [
+		"oscarotero <oom@oscarotero.com>"
+	],
+	"homepage": "http://oscarotero.com/jquery",
+	"private": true,
+	"dependencies": {
+		"csans": "*",
+		"jquery": "*",
+		"magnific-popup": "*",
+		"selectize": "*",
+		"requirejs": "*"
+	}
+}
