@@ -76,7 +76,7 @@
 				<label><input type="radio" name="open_links" value="same-window"> Same window</label>
 			</fieldset>
 
-			<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons License">Creative Commons</a> | by <a href="http://twitter.com/misteroom">@misteroom</a></p>
+			<p><a href="https://github.com/oscarotero/jquery-cheatsheet" title="Get the code from github">Source code</a> | by <a href="http://twitter.com/misteroom">@misteroom</a></p>
 		</div>
 
 		<div id="modal" class="mfp-hide">
