@@ -22,6 +22,7 @@ class App extends \Fol\App {
 			->render(['data' => 'pages', 'templates' => 'templates'])
 			->copy('favicon.ico')
 			->copy('jquery.png')
+			->copy('.htaccess')
 			->command('stylecow convert css/styles.css ../public/css/styles.css --manifest css-build.json')
 			->command('r.js -o js-build.js');
 	}
