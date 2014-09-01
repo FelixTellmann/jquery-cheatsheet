@@ -5,12 +5,12 @@
 
 body {
 	background: #000;
-	padding: 10px 30px;
+	padding: 10px 15px;
 	font-family: 'Droid Sans', Helvetica, sans-serif;
 }
 
 header.main {
-	padding: 0 25px;
+	padding: 0 10px;
 	color: #FFF;
 	background: color(black alpha(0.8));
 	position: fixed;
@@ -18,8 +18,6 @@ header.main {
 	left: 0;
 	right: 0;
 	z-index: 2;
-	display: flex;
-	align-items: center;
 
 	a {
 		color: inherit;
@@ -34,6 +32,7 @@ header.main {
 		font-size: 0.8rem;
 		font-weight: normal;
 		padding: 10px 5px;
+		white-space: nowrap;
 
 		strong {
 			font-size: 1rem;
@@ -41,7 +40,8 @@ header.main {
 	}
 
 	.filter {
-		padding: 10px 5px;
+		padding: 2px 5px;
+		box-sizing: border-box;
 
 		.selectize-input {
 			padding: 4px 6px;
@@ -52,17 +52,13 @@ header.main {
 	}
 
 	.filter-version {
-		width: 100px;
+		width: 100%;
 	}
 	.filter-search {
-		width: 250px;
-		flex-grow: 1;
+		width: 100%;
 
 		.selectize-input {
 			cursor: text !important;
-		}
-		.selectize-control {
-			max-width: 400px;
 		}
 	}
 
@@ -70,6 +66,7 @@ header.main {
 		font-size: 0.8rem;
 		padding: 10px 5px;
 		outline: 0;
+		display: inline-block;
 	}
 }
 
@@ -83,7 +80,7 @@ header.main {
 
 .content {
 	display: flex;
-	margin-top: 25px;
+	margin-top: 125px;
 	padding-right: 30px;
 
 
@@ -196,4 +193,39 @@ header.main {
 	}
 }
 
+.selectize-dropdown .active {
+	background: color(black tint(10));
+}
+
 @import "colorfull.css";
+
+@media (min-width: 650px) {
+	body {
+		padding: 10px 30px;
+	}
+	header.main {
+		padding: 0 30px;
+		display: flex;
+		align-items: center;
+
+		.filter {
+			padding: 10px 5px;
+		}
+
+		.filter-version {
+			width: 100px;
+		}
+		.filter-search {
+			width: 250px;
+			flex-grow: 1;
+
+			.selectize-control {
+				max-width: 400px;
+			}
+		}
+	}
+
+	.content {
+		margin-top: 25px;
+	}
+}

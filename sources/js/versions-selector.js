@@ -3,9 +3,16 @@ define([
 	'selectize',
 ], function ($) {
 	var currentVersion;
+	var sources = {};
 
 	return {
 		init: function ($selector, $links) {
+			$selector.find('option').each(function () {
+				var $this = $(this);
+
+				sources[$this.attr('value')] = $this.data('source');
+			});
+
 			$selector.selectize();
 
 			$selector.change(function () {
@@ -36,6 +43,10 @@ define([
 
 		getCurrent: function () {
 			return currentVersion;
+		},
+
+		getCurrentSource: function () {
+			return sources[currentVersion];
 		}
 	}
 });

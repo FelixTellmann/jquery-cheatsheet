@@ -29,8 +29,33 @@ define([
 				var value = $selector.val();
 
 				if (value) {
-					$links.filter('.' + value).first().click();
+					$links.filter('.' + value.replace('.', '-')).first().click();
 				}
+			});
+
+			var selectize = $selector[0].selectize;
+
+			$(window).keydown(function (event) {
+				if (!event.metaKey && !event.shiftKey && !event.ctrlKey && !event.altKey && event.keyCode != 27 && !$(':focus').is('input')) {
+					var open = function () {
+						selectize.open();
+						$selector.siblings('.selectize-control').find('.selectize-input input').focus();
+					};
+
+					open();
+				}
+			});
+
+			$selector.siblings('.selectize-control').find('.selectize-input input').keydown(function (event) {
+				if (event.which === 27) { //esc
+					$selector.siblings('.selectize-control').find('.selectize-input input').blur();
+					selectize.blur();
+					selectize.clear();
+				}
+			});
+
+			selectize.on('dropdown_open', function () {
+				selectize.clear();
 			});
 		}
 	}

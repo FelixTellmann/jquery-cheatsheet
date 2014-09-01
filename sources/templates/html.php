@@ -31,7 +31,7 @@
 				<select id="version" data-placeholder="Version...">
 					
 					<?php foreach (array_reverse($versions) as $version): ?>
-					<option value="<?= $version['value'] ?>"><?= $version['name'] ?></option>
+					<option data-source="<?= $version['source']; ?>" value="<?= $version['value'] ?>"><?= $version['name'] ?></option>
 					<?php endforeach; ?>
 				</select>
 			</div>

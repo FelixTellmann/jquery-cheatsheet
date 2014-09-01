@@ -5,7 +5,7 @@
 	<?php foreach ($items as $item): ?>
 		<?php 
 		$class = 'v'.str_replace('.', '-', $item['from']);
-		$class .= ' '.$item['doc'];
+		$class .= ' '.str_replace('.', '-', $item['doc']);
 
 		if (isset($item['deprecated'])) {
 			$class .= ' v'.str_replace('.', '-', $item['deprecated']).'-d';

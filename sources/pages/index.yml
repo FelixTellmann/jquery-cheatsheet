@@ -3,66 +3,87 @@ template: html.php
 versions:
   - name:  "1.0"
     value: "1.0"
+    source: ""
 
   - name:  "1.0.4"
     value: "1.0.4"
+    source: ""
 
   - name:  "1.1"
     value: "1.1"
+    source: ""
 
   - name:  "1.1.2"
     value: "1.1.2"
+    source: ""
 
   - name:  "1.1.3"
     value: "1.1.3"
+    source: ""
 
   - name:  "1.1.3"
     value: "1.1.3"
+    source: ""
 
   - name:  "1.2"
     value: "1.2"
+    source: ""
 
   - name:  "1.2.3"
     value: "1.2.3"
+    source: ""
 
   - name:  "1.2.6"
     value: "1.2.6"
+    source: "1.2.6"
 
   - name:  "1.3"
     value: "1.3"
+    source: "1.3.2"
 
   - name:  "1.4"
     value: "1.4"
+    source: "1.4.1"
 
   - name:  "1.4.1"
     value: "1.4.1"
+    source: "1.4.1"
 
   - name:  "1.4.2"
     value: "1.4.2"
+    source: "1.4.2"
 
   - name:  "1.4.3"
     value: "1.4.3"
+    source: "1.4.3"
 
   - name:  "1.4.4"
     value: "1.4.4"
+    source: "1.4.3"
 
   - name:  "1.5"
     value: "1.5"
+    source: "1.5"
 
   - name:  "1.6"
     value: "1.6"
+    source: "1.6.2"
 
   - name:  "1.7"
     value: "1.7"
+    source: "1.7.2"
 
   - name:  "1.8"
     value: "1.8"
+    source: "1.8.3"
 
   - name:  "1.9"
     value: "1.9"
+    source: "1.9.1"
 
   - name:  "1.10 / 2.0"
     value: "1.10"
+    source: "2.0.3"
 
 selectors:
   title: Selectors

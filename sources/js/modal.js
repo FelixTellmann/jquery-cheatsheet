@@ -22,8 +22,8 @@ define([
 
 						$modal.find('.link-api a').attr('href', $this.attr('href')).click();
 
-						if ($this.data('src')) {
-							$modal.find('.link-src a').show().attr('href', 'http://james.padolsey.com/jquery/' + versions.getCurrent() + '/' + $this.data('src'));
+						if ($this.data('src') && versions.getCurrentSource()) {
+							$modal.find('.link-src a').show().attr('href', 'http://james.padolsey.com/jquery/' + versions.getCurrentSource() + '/' + $this.data('src'));
 						} else {
 							$modal.find('.link-src a').hide();
 						}
@@ -47,6 +47,7 @@ define([
 						return;
 
 					case 'same-window':
+						document.location.href = $this.attr('href');
 						return;
 				}
 			});
