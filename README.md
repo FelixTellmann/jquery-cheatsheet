@@ -3,8 +3,6 @@ jquery-cheatsheet
 
 jQuery interactive cheatsheet
 http://oscarotero.com/jquery/
-<<<<<<< HEAD
-=======
 
 
 Requirements:
@@ -27,4 +25,3 @@ $ composer install
 $ bower install
 $ php fol build
 ```
->>>>>>> new-version
