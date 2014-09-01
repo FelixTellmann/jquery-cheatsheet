@@ -5,7 +5,8 @@
 	removeCombined: true,
 	modules: [
 		{
-			name: 'main'
+			name: 'main',
+			include: ['../../sources/components/requirejs/require.js']
 		}
 	]
 }

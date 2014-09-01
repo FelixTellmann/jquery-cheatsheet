@@ -17,7 +17,7 @@
 		<meta property="og:description" content="jQuery Cheatsheet in HTML with links to the original API documentation">
 
 		<link rel="stylesheet" href="css/styles.css" type="text/css">
-		<script type="text/javascript" src="components/requirejs/require.js" data-main="js/main.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</head>
 
 	<body>

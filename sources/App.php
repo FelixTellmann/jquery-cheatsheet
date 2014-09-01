@@ -15,15 +15,30 @@ class App extends \Fol\App {
 		});
 	}
 
-	public function build ()
+	public function build()
 	{
 		$this->builder
 			->clear()
 			->render(['data' => 'pages', 'templates' => 'templates'])
-			->copy('components/requirejs')
-			->command([
-				'stylecow convert css/styles.css ../public/css/styles.css --manifest css-build.json',
-				'r.js -o js-build.js'
-			]);
+			->command('stylecow convert css/styles.css ../public/css/styles.css --manifest css-build.json')
+			->command('r.js -o js-build.js');
+	}
+
+	public function watch()
+	{
+		$this->builder->watch([
+			'templates' => function () {
+				$this->builder->render(['data' => 'pages', 'templates' => 'templates']);
+			},
+			'pages' => function () {
+				$this->builder->render(['data' => 'pages', 'templates' => 'templates']);
+			},
+			'css' => function () {
+				$this->builder->command('stylecow convert css/styles.css ../public/css/styles.css --manifest css-build.json');
+			},
+			'js' => function () {
+				$this->builder->command('r.js -o js-build.js');
+			}
+		]);
 	}
 }

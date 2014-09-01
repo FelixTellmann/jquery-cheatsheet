@@ -14,4 +14,13 @@ $console
 		$app->build();
 	});
 
+$console
+	->register('watch')
+	->setDescription('Watch changes in sources')
+	->setCode(function (InputInterface $input, OutputInterface $output) {
+		$app = new App\App($input, $output);
+
+		$app->watch();
+	});
+
 $console->run();
