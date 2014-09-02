@@ -3,7 +3,8 @@ foreach ($sections as $section) {
 	foreach ($section['items'] as $item) {
 		$data = [
 			'sort' => preg_replace('/[^\w]/', '', $item['text']),
-			'from' => $item['from']
+			'from' => $item['from'],
+			'type' => $slug
 		];
 
 		if (!empty($item['deprecated'])) {

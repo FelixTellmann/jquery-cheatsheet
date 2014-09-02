@@ -10,7 +10,7 @@ define([
 				render: {
 					option: function (data, escape) {
 						var regex = /\./g;
-						var className = 'option v' + data.from.replace(regex, '-');
+						var className = 'option v' + data.from.replace(regex, '-') + ' ' + data.type;
 
 						if (data.deprecated) {
 							className += ' v' + data.deprecated.replace(regex, '-') + '-d';

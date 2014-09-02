@@ -1,4 +1,4 @@
-<article id="<?= $slug ?>">
+<article id="<?= $slug ?>" class="<?= $slug ?>">
 	<h1><?= $title ?></h1>
 
 	<div>
