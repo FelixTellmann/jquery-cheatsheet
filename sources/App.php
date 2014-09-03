@@ -11,7 +11,7 @@ class App extends \Fol\App {
 	public function __construct(InputInterface $input, OutputInterface $output)
 	{
 		$this->define('builder', function () use ($input, $output) {
-			return new Builder(new FileSystem(BASE_PATH.'/sources'), new FileSystem(BASE_PATH.'/public'), $input, $output);
+			return new Builder(new FileSystem(BASE_PATH.'/sources'), new FileSystem(PUBLIC_ROOT), $input, $output);
 		});
 	}
 
@@ -23,7 +23,7 @@ class App extends \Fol\App {
 			->copy('favicon.ico')
 			->copy('jquery.png')
 			->copy('.htaccess')
-			->command('stylecow convert css/styles.css ../public/css/styles.css --manifest css-build.json')
+			->command('stylecow convert css/styles.css '.PUBLIC_ROOT.'/css/styles.css --manifest css-build.json')
 			->command('r.js -o js-build.js');
 	}
 
@@ -37,7 +37,7 @@ class App extends \Fol\App {
 				$this->builder->render(['data' => 'pages', 'templates' => 'templates']);
 			},
 			'css' => function () {
-				$this->builder->command('stylecow convert css/styles.css ../public/css/styles.css --manifest css-build.json');
+				$this->builder->command('stylecow convert css/styles.css '.PUBLIC_ROOT.'/css/styles.css --manifest css-build.json');
 			},
 			'js' => function () {
 				$this->builder->command('r.js -o js-build.js');
