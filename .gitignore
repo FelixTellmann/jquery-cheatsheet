@@ -32,6 +32,7 @@ constants.local.php
 
 # BOWER (or similar)
 
+node_modules/*
 sources/components/*
 public/*
 

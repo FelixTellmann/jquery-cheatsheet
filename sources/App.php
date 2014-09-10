@@ -15,6 +15,19 @@ class App extends \Fol\App {
 		});
 	}
 
+	public function install ()
+	{
+		$this->builder
+			->command([
+				'command' => 'npm install',
+				'cwd' => BASE_PATH.'/'
+			])
+			->command([
+				'command' => 'node node_modules/.bin/bower install',
+				'cwd' => BASE_PATH.'/'
+			]);
+	}
+
 	public function build()
 	{
 		$this->builder

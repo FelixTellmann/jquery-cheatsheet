@@ -23,4 +23,13 @@ $console
 		$app->watch();
 	});
 
+$console
+	->register('install')
+	->setDescription('Install all dependencies')
+	->setCode(function (InputInterface $input, OutputInterface $output) {
+		$app = new App\App($input, $output);
+
+		$app->install();
+	});
+
 $console->run();

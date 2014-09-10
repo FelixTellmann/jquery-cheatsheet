@@ -1,0 +1,10 @@
+{
+  "name": "jquery-cheatsheet",
+  "version": "0.0.1",
+  "description": "",
+  "devDependencies": {
+    "requirejs": "*",
+    "stylecow": ">=1",
+    "bower": "*"
+  }
+}
