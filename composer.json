@@ -32,8 +32,6 @@
         "bin-dir": "bin"
     },
     "autoload": {
-        "psr-4": {
-            "App\\": "sources/"
-        }
+        "classmap": ["Builder.php"]
     }
 }

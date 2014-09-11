@@ -4,11 +4,11 @@ require.config({
 	},
 	urlArgs: "bust=" +  (new Date()).getTime(),
 	paths: {
-		"jquery": "../components/jquery/dist/jquery",
-		"sifter": "../components/sifter/sifter",
-		"microplugin": "../components/microplugin/src/microplugin",
-		"magnific-popup": "../components/magnific-popup/dist/jquery.magnific-popup",
-		"selectize": "../components/selectize/dist/js/selectize"
+		"jquery": "../bower_components/jquery/dist/jquery",
+		"sifter": "../bower_components/sifter/sifter",
+		"microplugin": "../bower_components/microplugin/src/microplugin",
+		"magnific-popup": "../bower_components/magnific-popup/dist/jquery.magnific-popup",
+		"selectize": "../bower_components/selectize/dist/js/selectize"
 	}
 });
 

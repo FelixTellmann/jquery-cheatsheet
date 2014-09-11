@@ -30,15 +30,11 @@ constants.local.php
 
 
 
-# BOWER (or similar)
+# DEPENDENCIES
 
-sources/components/*
+node_modules/*
+bower_components
 public/*
-
-
-
-# COMPOSER
-
 composer.phar
 vendor/
 

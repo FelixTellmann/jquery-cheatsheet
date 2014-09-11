@@ -10,9 +10,7 @@ Requirements:
 
 * PHP 5.5 (required by FOL framework)
 * composer (to install php dependencies)
-* bower (to install frontend libraries)
-* stylecow (to proccess and minify the css code)
-* r.js (requirejs optimizer to proccess and minify the js code)
+* node (to install and optimize frontend libraries)
 
 
 Installation:
@@ -22,6 +20,11 @@ Installation:
 $ git clone https://github.com/oscarotero/jquery-cheatsheet.git
 $ cd jquery-cheatsheet
 $ composer install
-$ bower install
+$ php fol install
+```
+
+Build the site:
+
+```
 $ php fol build
 ```

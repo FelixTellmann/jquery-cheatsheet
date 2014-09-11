@@ -3,10 +3,8 @@
 	"homepage": "http://oscarotero.com/jquery",
 	"private": true,
 	"dependencies": {
-		"csans": "*",
-		"jquery": "*",
-		"magnific-popup": "*",
-		"selectize": "*",
-		"requirejs": "*"
+		"bower": "*",
+		"requirejs": "*",
+		"stylecow": "*"
 	}
 }

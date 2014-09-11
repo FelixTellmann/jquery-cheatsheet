@@ -6,7 +6,7 @@
 	modules: [
 		{
 			name: 'main',
-			include: ['../../sources/components/requirejs/require.js']
+			include: ['../../sources/bower_components/requirejs/require.js']
 		}
 	]
 }

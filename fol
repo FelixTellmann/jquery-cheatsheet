@@ -2,4 +2,42 @@
 
 <?php
 require 'bootstrap.php';
-require 'sources/console.php';
+
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+
+$console = new Application();
+
+
+//Install all dependencies
+
+$console
+	->register('install')
+	->setDescription('Build all pages')
+	->setCode(function (InputInterface $input, OutputInterface $output) {
+		(new Builder($input, $output))
+			->command('npm install')
+			->node('bower install');
+	});
+
+
+//Build the pages
+
+$console
+	->register('build')
+	->setDescription('Build all pages')
+	->setCode(function (InputInterface $input, OutputInterface $output) {
+		(new Builder($input, $output))
+			->clear('public')
+			->render('sources/pages', 'sources/templates', 'public')
+			->copy('sources/htaccess', 'public/.htaccess')
+			->copy('sources/favicon.ico', 'public/favicon.ico')
+			->copy('sources/jquery.png', 'public/jquery.png')
+			->copy('sources/jquery.pdf', 'public/jquery.pdf')
+			->node('stylecow convert sources/css/styles.css public/css/styles.css --manifest sources/css-build.json')
+			->node('r.js -o sources/js-build.js')
+			->copy('sources/htaccess', 'public/.htaccess');
+	});
+
+$console->run();
