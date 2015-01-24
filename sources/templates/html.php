@@ -40,14 +40,14 @@
 				<select id="search" placeholder="Search...">
 					<option></option>
 					<?php
-					echo $this->render('options.php', $selectors);
-					echo $this->render('options.php', $attributes);
-					echo $this->render('options.php', $manipulation);
-					echo $this->render('options.php', $traversing);
-					echo $this->render('options.php', $events);
-					echo $this->render('options.php', $effects);
-					echo $this->render('options.php', $ajax);
-					echo $this->render('options.php', $core);
+					$this->insert('options', $selectors);
+					$this->insert('options', $attributes);
+					$this->insert('options', $manipulation);
+					$this->insert('options', $traversing);
+					$this->insert('options', $events);
+					$this->insert('options', $effects);
+					$this->insert('options', $ajax);
+					$this->insert('options', $core);
 					?>
 				</select>
 			</div>
@@ -57,14 +57,14 @@
 
 		<div class="content">
 			<?php
-			echo $this->render('article.php', $selectors);
-			echo $this->render('article.php', $attributes);
-			echo $this->render('article.php', $manipulation);
-			echo $this->render('article.php', $traversing);
-			echo $this->render('article.php', $events);
-			echo $this->render('article.php', $effects);
-			echo $this->render('article.php', $ajax);
-			echo $this->render('article.php', $core);
+			$this->insert('article', $selectors);
+			$this->insert('article', $attributes);
+			$this->insert('article', $manipulation);
+			$this->insert('article', $traversing);
+			$this->insert('article', $events);
+			$this->insert('article', $effects);
+			$this->insert('article', $ajax);
+			$this->insert('article', $core);
 			?>
 		</div>
 

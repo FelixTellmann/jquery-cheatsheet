@@ -1,4 +1,4 @@
-template: html.php
+template: html
 
 versions:
   - name:  "1.0"

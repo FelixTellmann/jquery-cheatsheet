@@ -19,17 +19,8 @@
     },
     "require": {
         "php": ">=5.5.0",
-        "fol/core": "*",
-        "fol/builder": "*"
-    },
-    "scripts": {
-        "post-create-project-cmd": "Fol\\Composer::setConstants",
-        "post-update-cmd": "Fol\\Composer::setConstants",
-        "post-install-cmd": "Fol\\Composer::setConstants"
-    },
-    "config": {
-        "vendor-dir": "vendor",
-        "bin-dir": "bin"
+        "fol/tasks": "dev-master",
+        "codegyre/robo": "0.5.*"
     },
     "autoload": {
         "classmap": ["Builder.php"]

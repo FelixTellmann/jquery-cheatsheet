@@ -8,7 +8,7 @@ http://oscarotero.com/jquery/
 Requirements:
 -------------
 
-* PHP 5.5 (required by FOL framework)
+* PHP 5.5
 * composer (to install php dependencies)
 * node (to install and optimize frontend libraries)
 

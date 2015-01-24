@@ -9,7 +9,7 @@
 					echo '</div><div>';
 				}
 
-				echo $this->render('section.php', $section);
+				$this->insert('section', $section);
 			}
 			?>
 		</div>
