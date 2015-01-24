@@ -22,6 +22,9 @@
         "fol/tasks": "1.*",
         "codegyre/robo": "0.5.*"
     },
+    "scripts": {
+        "post-install-cmd": "php fol install"
+    },
     "autoload": {
         "classmap": ["Builder.php"]
     }

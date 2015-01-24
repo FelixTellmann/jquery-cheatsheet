@@ -5,6 +5,6 @@
 	"dependencies": {
 		"bower": "*",
 		"requirejs": "*",
-		"stylecow": "*"
+		"stylecow-cli": "*"
 	}
 }

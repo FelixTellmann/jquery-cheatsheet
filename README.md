@@ -20,11 +20,16 @@ Installation:
 $ git clone https://github.com/oscarotero/jquery-cheatsheet.git
 $ cd jquery-cheatsheet
 $ composer install
-$ php fol install
 ```
 
-Build the site:
+To build the site:
 
 ```
 $ php fol build
+```
+
+To view the site:
+
+```
+$ php fol server
 ```
