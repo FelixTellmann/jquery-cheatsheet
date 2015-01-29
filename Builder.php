@@ -1,10 +1,16 @@
 <?php
 use Robo\Tasks;
 use Fol\Tasks\PageRender;
+use Fol\Config;
 
 class Builder extends Tasks
 {
 	use PageRender;
+
+	public function __construct()
+	{
+		$this->config = new Config('config', 'local');
+	}
 
 	/**
 	 * Install all npm and bower components
@@ -52,9 +58,22 @@ class Builder extends Tasks
 
 		//Render pages
 		$this->taskPageRender()
-			->templates(__DIR__.'/sources/templates')
-			->origin(__DIR__.'/sources/pages')
-			->destination(__DIR__.'/public')
+			->templates('sources/templates')
+			->origin('sources/pages')
+			->destination('public')
+			->run();
+	}
+
+	/**
+	 * Publish the static site in the server using rsync
+	 * You must configure the path connection in config/local/rsync.php
+	 */
+	public function publish()
+	{
+		$this->taskRsync()
+			->fromPath('public/')
+			->toPath($this->config['rsync']['path'])
+			->recursive()
 			->run();
 	}
 }

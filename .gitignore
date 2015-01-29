@@ -24,9 +24,8 @@ $RECYCLE.BIN/
 *.msp
 
 
-# DATA STUFF (logs, cache, etc)
-logs
-constants.local.php
+# DATA STUFF (logs, cache, local config etc)
+config/*/
 
 
 
