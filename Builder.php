@@ -52,8 +52,8 @@ class Builder extends Tasks
 
 		//Execute css/js generation
 		$this->taskParallelExec()
-			->process('node node_modules/.bin/stylecow execute stylecow.json')
-			->process('node node_modules/.bin/r.js -o sources/js-build.js')
+			->process('node node_modules/.bin/stylecow execute config/css.json')
+			->process('node node_modules/.bin/r.js -o config/js.js')
 			->run();
 
 		//Render pages
