@@ -84,7 +84,9 @@
 				<li class="link-api"><a href="">API doc</a></li>
 				<li class="link-src"><a href="http://james.padolsey.com/jquery/">Source viewer</a></li>
 			</ul>
-			<iframe src="about:blank"></iframe>
+			<div>
+				<iframe src="about:blank"></iframe>
+			</div>
 		</div>
 
 		<script type="text/javascript">
