@@ -1,5 +1,6 @@
 @import "http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold";
-@import "../bower_components/csans/csans.css";
+@import "../bower_components/normalize.css/normalize.css";
+@import "../bower_components/csans/source/reset.css";
 @import "../bower_components/selectize/dist/css/selectize.css";
 @import "../bower_components/magnific-popup/dist/magnific-popup.css";
 
@@ -141,7 +142,7 @@ header.main {
 	p {
 		padding: 10px;
 		font-size: 0.8rem;
-		border-top: solid 1px color(black tint(10));
+		border-top: solid 1px color(black tint(90));
 
 		a {
 			color: black;
@@ -178,7 +179,7 @@ header.main {
 			text-decoration: none;
 
 			&:hover {
-				background: color(black tint(10));
+				background: color(black tint(90));
 			}
 
 			&.selected {
@@ -202,7 +203,7 @@ header.main {
 }
 
 .selectize-dropdown .active {
-	background: color(black tint(10));
+	background: color(black tint(90));
 }
 
 @import "colorfull.css";

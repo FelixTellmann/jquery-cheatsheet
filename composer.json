@@ -19,8 +19,7 @@
     },
     "require": {
         "php": ">=5.5.0",
-        "fol/tasks": "1.*",
-        "codegyre/robo": "0.5.*",
+        "fol/tasks": "*",
         "fol/core": "~4.1"
     },
     "scripts": {

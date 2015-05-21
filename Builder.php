@@ -1,12 +1,9 @@
 <?php
-use Robo\Tasks;
-use Fol\Tasks\PageRender;
+use Fol\Tasks\Tasks as Tasks;
 use Fol\Config;
 
 class Builder extends Tasks
 {
-	use PageRender;
-
 	public function __construct()
 	{
 		$this->config = new Config('config', 'local');
@@ -19,7 +16,7 @@ class Builder extends Tasks
 	{
 		//npm + bower
 		$this->taskNpmInstall()->run();
-		$this->taskBowerInstall()->run();
+		$this->taskBowerInstall('node_modules/.bin/bower')->run();
 	}
 
 	/**
@@ -52,7 +49,7 @@ class Builder extends Tasks
 
 		//Execute css/js generation
 		$this->taskParallelExec()
-			->process('node node_modules/.bin/stylecow execute config/css.json')
+			->process('node node_modules/.bin/stylecow -c config/stylecow.json')
 			->process('node node_modules/.bin/r.js -o config/js.js')
 			->run();
 

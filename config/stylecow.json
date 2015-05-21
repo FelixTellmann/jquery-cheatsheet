@@ -1,7 +1,11 @@
 {
-	"input": "../sources/css/styles.css",
-	"output": "../public/css/styles.css",
-	"map": "../public/css/styles.map",
+	"files": [
+		{
+			"input": "../sources/css/styles.css",
+			"output": "../public/css/styles.css",
+			"map": "../public/css/styles.map"
+		}
+	],
 	"support": {
 		"explorer": 10,
 		"firefox": 30,

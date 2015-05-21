@@ -1,12 +1,13 @@
 {
-	"name": "jquery-cheat-sheet",
-	"homepage": "http://oscarotero.com/jquery",
-	"private": true,
-	"dependencies": {
-		"csans": "*",
-		"jquery": "*",
-		"magnific-popup": "*",
-		"selectize": "*",
-		"requirejs": "*"
-	}
+  "name": "jquery-cheat-sheet",
+  "homepage": "http://oscarotero.com/jquery",
+  "private": true,
+  "dependencies": {
+    "csans": "*",
+    "jquery": "*",
+    "magnific-popup": "*",
+    "selectize": "*",
+    "requirejs": "*",
+    "normalize.css": "~3.0.3"
+  }
 }

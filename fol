@@ -3,6 +3,4 @@
 <?php
 require __DIR__.'/vendor/autoload.php';
 
-$runner = new Robo\Runner();
-$app = $runner->createApplication('Builder');
-$app->run();
+(new Fol\Tasks\Runner)->execute('Builder');
