@@ -25,4 +25,9 @@ require([
 	search.init($('#search'), $links);
 	modal.init($('#modal'), $links);
 	settings.init($('#about-link'));
+
+	//ad tracking
+	$('.ads a').click(function () {
+		_gaq.push(['_trackEvent', 'ad', 'click', $(this).attr('href')]);
+	});
 });

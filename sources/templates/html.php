@@ -68,6 +68,12 @@
 			?>
 		</div>
 
+		<div class="ads">
+			<a href="http://www.jspplang.org/" target="_blank" title="Go to JavaScript++">
+				<strong>Click here to learn about JavaScript++</strong>, which provides classes, type checking, and modules. It also works with jQuery
+			</a>
+		</div>
+
 		<div id="about" class="mfp-hide">
 			<fieldset>
 				<strong>Open links:</strong>
