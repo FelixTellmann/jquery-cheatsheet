@@ -217,7 +217,7 @@ header.main {
 		}
 
 		&::after {
-			content: "[add]";
+			content: "[ad]";
 			font-size: 0.8em;
 			color: color(black tint(20));
 		}
