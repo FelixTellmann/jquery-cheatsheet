@@ -19,11 +19,15 @@
     },
     "require": {
         "php": ">=5.5.0",
-        "fol/tasks": "*",
-        "fol/core": "~4.1"
+        "fol/tasks": "1.*",
+        "fol/core": "8.*",
+        "vlucas/phpdotenv": "^2.0"
     },
     "scripts": {
-        "post-install-cmd": "php fol install"
+        "post-install-cmd": [
+            "php install.php",
+            "php fol install"
+        ]
     },
     "autoload": {
         "classmap": ["Builder.php"]

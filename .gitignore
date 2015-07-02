@@ -24,18 +24,10 @@ $RECYCLE.BIN/
 *.msp
 
 
-# DATA STUFF (logs, cache, local config etc)
-config/*/
-
-
-
-# DEPENDENCIES
-
-node_modules/*
+# DATA STUFF
+.env
+node_modules
 bower_components
-public/*
+public
 composer.phar
-vendor/
-
-# You can comment this line: http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
-composer.lock
+vendor

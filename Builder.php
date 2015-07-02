@@ -1,12 +1,11 @@
 <?php
-use Fol\Tasks\Tasks as Tasks;
-use Fol\Config;
+use Fol\Tasks\Runner;
+use Fol\Tasks\Tasks;
 
 class Builder extends Tasks
 {
-	public function __construct()
-	{
-		$this->config = new Config('config', 'local');
+	public static function run() {
+		(new Runner)->execute(__CLASS__);
 	}
 
 	/**
@@ -48,10 +47,8 @@ class Builder extends Tasks
 			->run();
 
 		//Execute css/js generation
-		$this->taskParallelExec()
-			->process('node node_modules/.bin/stylecow -c config/stylecow.json')
-			->process('node node_modules/.bin/r.js -o config/js.js')
-			->run();
+		$this->taskExec('node node_modules/.bin/stylecow -c stylecow.json')->run();
+		$this->taskExec('node node_modules/.bin/r.js -o js.js')->run();
 
 		//Render pages
 		$this->taskPageRender()
@@ -69,7 +66,7 @@ class Builder extends Tasks
 	{
 		$this->taskRsync()
 			->fromPath('public/')
-			->toPath($this->config['rsync']['path'])
+			->toPath(getenv('APP_PUBLISH_RSYNC'))
 			->recursive()
 			->run();
 	}

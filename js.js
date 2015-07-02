@@ -1,8 +1,8 @@
 {
-	appDir: "../sources/js",
+	appDir: "sources/js",
 	baseUrl: '.',
-	mainConfigFile : '../sources/js/main.js',
-	dir: '../public/js',
+	mainConfigFile : 'sources/js/main.js',
+	dir: 'public/js',
 	removeCombined: true,
 	modules: [
 		{

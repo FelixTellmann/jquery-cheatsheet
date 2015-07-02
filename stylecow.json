@@ -1,9 +1,9 @@
 {
 	"files": [
 		{
-			"input": "../sources/css/styles.css",
-			"output": "../public/css/styles.css",
-			"map": "../public/css/styles.map"
+			"input": "sources/css/styles.css",
+			"output": "public/css/styles.css",
+			"map": "public/css/styles.map"
 		}
 	],
 	"support": {
