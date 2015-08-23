@@ -19,7 +19,7 @@ require([
 	'modal',
 	'settings'
 ], function ($, versions, search, modal, settings) {
-	var $links = $('.content a');
+	var $links = $('.main-content a');
 
 	versions.init($('#version'), $links);
 	search.init($('#search'), $links);

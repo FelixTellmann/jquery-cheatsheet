@@ -1,6 +1,0 @@
-[02-Jul-2015 16:33:43 Europe/Madrid] PHP Fatal error:  Class 'Dotenv\Dotenv' not found in /Volumes/Documentos/www/jquery-cheatsheet/bootstrap.php on line 16
-[02-Jul-2015 16:34:14 Europe/Madrid] PHP Fatal error:  Class 'Dotenv\Dotenv' not found in /Volumes/Documentos/www/jquery-cheatsheet/bootstrap.php on line 16
-[02-Jul-2015 16:34:39 Europe/Madrid] PHP Fatal error:  Class 'Dotenv\Dotenv' not found in /Volumes/Documentos/www/jquery-cheatsheet/bootstrap.php on line 16
-[02-Jul-2015 16:34:51 Europe/Madrid] PHP Fatal error:  Class 'Dotenv\Dotenv' not found in /Volumes/Documentos/www/jquery-cheatsheet/bootstrap.php on line 16
-[02-Jul-2015 16:35:32 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'static' (T_STATIC), expecting identifier (T_STRING) in /Volumes/Documentos/www/jquery-cheatsheet/Builder.php on line 7
-[02-Jul-2015 16:35:38 Europe/Madrid] PHP Parse error:  syntax error, unexpected 'static' (T_STATIC), expecting identifier (T_STRING) in /Volumes/Documentos/www/jquery-cheatsheet/Builder.php on line 7

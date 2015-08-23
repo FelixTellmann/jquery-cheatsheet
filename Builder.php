@@ -43,7 +43,6 @@ class Builder extends Tasks
 			->copy('sources/favicon.ico', 'public/favicon.ico')
 			->copy('sources/jquery.png', 'public/jquery.png')
 			->copy('sources/jquery.pdf', 'public/jquery.pdf')
-			->copy('sources/htaccess', 'public/.htaccess')
 			->run();
 
 		//Execute css/js generation
@@ -66,7 +65,7 @@ class Builder extends Tasks
 	{
 		$this->taskRsync()
 			->fromPath('public/')
-			->toPath(getenv('APP_PUBLISH_RSYNC'))
+			->toPath(env('APP_PUBLISH_RSYNC'))
 			->recursive()
 			->run();
 	}

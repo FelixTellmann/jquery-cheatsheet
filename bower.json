@@ -3,11 +3,11 @@
   "homepage": "http://oscarotero.com/jquery",
   "private": true,
   "dependencies": {
-    "csans": "*",
     "jquery": "*",
     "magnific-popup": "*",
     "selectize": "*",
     "requirejs": "*",
-    "normalize.css": "~3.0.3"
+    "normalize.css": "~3.0.3",
+    "almond": "~0.3.1"
   }
 }

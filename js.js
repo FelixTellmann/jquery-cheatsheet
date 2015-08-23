@@ -7,7 +7,7 @@
 	modules: [
 		{
 			name: 'main',
-			include: ['../../sources/bower_components/requirejs/require.js']
+			include: ['../../sources/bower_components/almond/almond.js']
 		}
 	]
 }
