@@ -3,9 +3,12 @@
 <html lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
 		<title>jQuery Cheat Sheet</title>
 
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<meta name="author" content="Oscar Otero - http://oscarotero.com">
 		<meta name="title" content="jQuery Cheat Sheet">

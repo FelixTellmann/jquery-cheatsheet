@@ -39,6 +39,10 @@ fieldset, iframe {
 	left: 0;
 	right: 0;
 	z-index: 2;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 
 	a {
 		color: inherit;
@@ -60,6 +64,11 @@ fieldset, iframe {
 			color: white;
 		}
 		
+	}
+
+	.filter-group {
+		margin: .5em 0;
+		max-width: 400px;
 	}
 
 	.filter {
@@ -96,12 +105,23 @@ fieldset, iframe {
 
 	.filter-version {
 		width: 100%;
+
+		.selectize-input {
+			border-radius: 6px 6px 0 0;
+		}
 	}
 	.filter-search {
 		width: 100%;
+		margin-top: 2px;
 
 		.selectize-input {
+			border-radius: 0 0 6px 6px;
 			cursor: text !important;
+
+			&.dropdown-active {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
 		}
 
 		.selectize-dropdown-content {
@@ -116,19 +136,18 @@ fieldset, iframe {
 
 	.about {
 		font-size: 0.9rem;
-		padding: 0 1rem;
 		outline: 0;
-		display: block;
 	}
 
 	@media (min-width: 750px) {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
+
+		.about {
+			display: block;
+			padding: 0 1rem;
+		}
 
 		.filter-group {
 			width: 100%;
@@ -149,6 +168,7 @@ fieldset, iframe {
 				}
 			}
 			.filter-search {
+				margin-top: 0;
 				.selectize-input {
 					border-radius: 0 6px 6px 0;
 
@@ -164,7 +184,11 @@ fieldset, iframe {
 /* Main content */
 .main-content {
 	display: flex;
-	padding: 2.5rem 0 0;
+	padding: 9.2rem 0 0;
+
+	@media (min-width: 750px) {
+		padding-top: 2.5rem;
+	}
 
 	article {
 		flex-shrink: 0;
@@ -174,9 +198,13 @@ fieldset, iframe {
 		h1 {
 			font-size: .9em;
 			margin: 0;
-			padding: 2rem 1rem .5rem;
+			padding: .5rem 1rem;
 			background: color(black a(.1));
 			text-transform: uppercase;
+
+			@media (min-width: 750px) {
+				padding-top: 2rem;
+			}
 		}
 
 		a {
@@ -220,6 +248,11 @@ fieldset, iframe {
 				text-decoration: none;
 				display: block;
 				padding: .15em .5em;
+
+				@media (min-height: 800px) {
+					padding-top: .2em;
+					padding-bottom: .2em;
+				}
 			}
 		}
 		h2.deactivate,
