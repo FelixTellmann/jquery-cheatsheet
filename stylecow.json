@@ -1,30 +1,30 @@
 {
-	"files": [
-		{
-			"input": "source/css/styles.css",
-			"output": "public/css/styles.css",
-			"map": "public/css/styles.map"
-		}
-	],
-	"support": {
-		"explorer": 10,
-		"firefox": 30,
-		"chrome": 35,
-		"safari": 6,
-		"opera": 22,
-		"android": 4,
-		"ios": 6
-	},
-	"plugins": [
-		"color",
-		"fixes",
-		"flex",
-		"import",
-		"matches",
-		"nested-rules",
-		"prefixes",
-		"rem",
-		"variables"
-	],
-	"code": "minify"
+    "files": [
+        {
+            "input": "source/css/styles.css",
+            "output": "public/css/styles.css",
+            "map": "public/css/styles.map"
+        }
+    ],
+    "support": {
+        "explorer": 10,
+        "firefox": 30,
+        "chrome": 35,
+        "safari": 6,
+        "opera": 22,
+        "android": 4,
+        "ios": 6
+    },
+    "plugins": [
+        "color",
+        "fixes",
+        "flex",
+        "import",
+        "matches",
+        "nested-rules",
+        "prefixes",
+        "rem",
+        "variables"
+    ],
+    "code": "minify"
 }

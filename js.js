@@ -7,7 +7,7 @@
 	modules: [
 		{
 			name: 'main',
-			include: ['../../source/bower_components/almond/almond.js']
+			include: ['../../bower_components/almond/almond.js']
 		}
 	]
 }
