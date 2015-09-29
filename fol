@@ -3,5 +3,5 @@
 <?php
 require __DIR__.'/bootstrap.php';
 
-//Execute the builder
-Builder::run();
+$runner = new \Robo\Runner();
+$runner->execute();

@@ -19,9 +19,10 @@
     },
     "require": {
         "php": ">=5.5.0",
-        "fol/tasks": "1.*",
-        "fol/core": "8.*",
-        "vlucas/phpdotenv": "^2.0"
+        "fol/builder": "^1.0",
+        "vlucas/phpdotenv": "^2.0",
+        "codegyre/robo": "^0.5.4",
+        "mrclay/minify": "^2.2"
     },
     "scripts": {
         "post-install-cmd": [
@@ -30,6 +31,6 @@
         ]
     },
     "autoload": {
-        "classmap": ["Builder.php"]
+        "classmap": ["Site.php"]
     }
 }

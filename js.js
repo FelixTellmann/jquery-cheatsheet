@@ -1,13 +1,13 @@
 {
-	appDir: "sources/js",
+	appDir: "source/js",
 	baseUrl: '.',
-	mainConfigFile : 'sources/js/main.js',
+	mainConfigFile : 'source/js/main.js',
 	dir: 'public/js',
 	removeCombined: true,
 	modules: [
 		{
 			name: 'main',
-			include: ['../../sources/bower_components/almond/almond.js']
+			include: ['../../source/bower_components/almond/almond.js']
 		}
 	]
 }
