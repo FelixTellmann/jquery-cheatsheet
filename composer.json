@@ -25,10 +25,7 @@
         "mrclay/minify": "^2.2"
     },
     "scripts": {
-        "post-install-cmd": [
-            "php install.php",
-            "php fol install"
-        ]
+        "post-install-cmd": "php vendor/bin/robo install"
     },
     "autoload": {
         "classmap": ["Site.php"]

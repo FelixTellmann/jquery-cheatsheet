@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3b57cfb43d2563251e52030bba9fffd3",
+    "hash": "9ee214ce1c7abf30fc38c38e8de4d76b",
     "packages": [
         {
             "name": "codegyre/robo",
@@ -85,20 +85,105 @@
             "time": "2014-12-30 15:22:37"
         },
         {
-            "name": "fol/builder",
-            "version": "v1.0.0",
+            "name": "erusev/parsedown",
+            "version": "1.5.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fol-project/builder.git",
-                "reference": "a0389e64b91e8e215a187fe594a9eeb2bd2140db"
+                "url": "https://github.com/erusev/parsedown.git",
+                "reference": "0e89e3714bda18973184d30646306bb0a482bd96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fol-project/builder/zipball/a0389e64b91e8e215a187fe594a9eeb2bd2140db",
-                "reference": "a0389e64b91e8e215a187fe594a9eeb2bd2140db",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/0e89e3714bda18973184d30646306bb0a482bd96",
+                "reference": "0e89e3714bda18973184d30646306bb0a482bd96",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Parsedown": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "Parser for Markdown.",
+            "homepage": "http://parsedown.org",
+            "keywords": [
+                "markdown",
+                "parser"
+            ],
+            "time": "2015-08-03 09:24:05"
+        },
+        {
+            "name": "evert/sitemap-php",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/evert/sitemap-php.git",
+                "reference": "be07a062943401067bf0ba62710ca733c838bc24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/evert/sitemap-php/zipball/be07a062943401067bf0ba62710ca733c838bc24",
+                "reference": "be07a062943401067bf0ba62710ca733c838bc24",
                 "shasum": ""
             },
             "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SitemapPHP": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Osman Üngür",
+                    "email": "osmanungur@gmail.com"
+                },
+                {
+                    "name": "Evert Pot",
+                    "email": "evert@rooftopsolutions.nl"
+                }
+            ],
+            "description": "Lightweight library for generating Google sitemap XML files",
+            "homepage": "http://code.google.com/p/sabredav/",
+            "keywords": [
+                "Sitemap"
+            ],
+            "time": "2015-04-17 21:45:50"
+        },
+        {
+            "name": "fol/builder",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fol-project/builder.git",
+                "reference": "5515d81a45767d7d826f9ee808ab47611cb0b374"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fol-project/builder/zipball/5515d81a45767d7d826f9ee808ab47611cb0b374",
+                "reference": "5515d81a45767d7d826f9ee808ab47611cb0b374",
+                "shasum": ""
+            },
+            "require": {
+                "erusev/parsedown": "^1.5",
+                "evert/sitemap-php": "^1.2",
                 "fol/core": "^8.2",
                 "imagecow/imagecow": "^1.5",
                 "league/plates": "^3.1",
@@ -134,7 +219,7 @@
                 "html",
                 "static"
             ],
-            "time": "2015-09-29 21:39:37"
+            "time": "2015-10-01 00:30:55"
         },
         {
             "name": "fol/core",
@@ -387,16 +472,16 @@
         },
         {
             "name": "oscarotero/psr7-middlewares",
-            "version": "v3.1.0",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/psr7-middlewares.git",
-                "reference": "4804218e8865a824acdc61ef7377aefaaee8136b"
+                "reference": "95591c260c3483728b8b24db49f3acc57e4c418e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/psr7-middlewares/zipball/4804218e8865a824acdc61ef7377aefaaee8136b",
-                "reference": "4804218e8865a824acdc61ef7377aefaaee8136b",
+                "url": "https://api.github.com/repos/oscarotero/psr7-middlewares/zipball/95591c260c3483728b8b24db49f3acc57e4c418e",
+                "reference": "95591c260c3483728b8b24db49f3acc57e4c418e",
                 "shasum": ""
             },
             "require": {
@@ -408,21 +493,23 @@
                 "m6web/firewall": "~1.0",
                 "matthiasmullie/scrapbook": "dev-master",
                 "mrclay/minify": "^2.2",
+                "neomerx/cors-psr7": "^0.2.0",
                 "nikic/fast-route": "0.*",
                 "phpunit/phpunit": "~4.0",
                 "ramsey/uuid": "^2.8",
                 "relay/relay": "0.2",
-                "willdurand/negotiation": "~1.3",
+                "willdurand/negotiation": "~2.0",
                 "zendframework/zend-diactoros": "1.*"
             },
             "suggest": {
-                "aura/router": "To use the AuraRouter middleware",
-                "aura/session": "To use the AuraSession middleware",
-                "m6web/firewall": "To use the Firewall middleware",
-                "mrclay/minify": "To use the Minify middleware",
-                "nikic/fast-route": "To use the FastRoute middleware",
-                "ramsey/uuid": "To use the UUID middleware",
-                "willdurand/negotiation": "To use the FormatNegotiator or LanguageNegotiator middleware"
+                "aura/router": "To use Middleware::auraRouter",
+                "aura/session": "To use Middleware::auraSession",
+                "m6web/firewall": "To use Middleware::firewall()",
+                "mrclay/minify": "To use Middleware::minify()",
+                "neomerx/cors-psr7": "To use Middleware::cors()",
+                "nikic/fast-route": "To use Middleware::fastRoute",
+                "ramsey/uuid": "To use Middleware::uuid()",
+                "willdurand/negotiation": "To use Middleware::formatNegotiator() and Middleware::languageNegotiator()"
             },
             "type": "library",
             "autoload": {
@@ -450,7 +537,7 @@
                 "psr-7",
                 "psr-messages"
             ],
-            "time": "2015-09-25 09:49:51"
+            "time": "2015-10-01 16:33:26"
         },
         {
             "name": "psr/http-message",
@@ -1095,16 +1182,16 @@
         },
         {
             "name": "willdurand/negotiation",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/willdurand/Negotiation.git",
-                "reference": "8a84c5956e765f432542fc52a8c6e9aff4508eb3"
+                "reference": "2a59f2376557303e3fa91465ab691abb82945edf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/willdurand/Negotiation/zipball/8a84c5956e765f432542fc52a8c6e9aff4508eb3",
-                "reference": "8a84c5956e765f432542fc52a8c6e9aff4508eb3",
+                "url": "https://api.github.com/repos/willdurand/Negotiation/zipball/2a59f2376557303e3fa91465ab691abb82945edf",
+                "reference": "2a59f2376557303e3fa91465ab691abb82945edf",
                 "shasum": ""
             },
             "require": {
@@ -1113,7 +1200,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4-dev"
+                    "dev-master": "1.5-dev"
                 }
             },
             "autoload": {
@@ -1127,7 +1214,7 @@
             ],
             "authors": [
                 {
-                    "name": "William DURAND",
+                    "name": "William Durand",
                     "email": "william.durand1@gmail.com"
                 }
             ],
@@ -1140,7 +1227,7 @@
                 "header",
                 "negotiation"
             ],
-            "time": "2015-07-28 13:10:50"
+            "time": "2015-10-01 07:42:40"
         },
         {
             "name": "zendframework/zend-diactoros",

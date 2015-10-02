@@ -22,8 +22,8 @@ $ cd jquery-cheatsheet
 $ composer install
 ```
 
-To view the site:
+To view the site (use `--sync` to use browser-sync:
 
 ```
-$ php fol server
+$ php vendor/bin/robo server
 ```

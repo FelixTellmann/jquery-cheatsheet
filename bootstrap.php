@@ -11,6 +11,10 @@ ini_set('display_startup_errors', 1);
 //Init global libraries
 $composer = include __DIR__.'/vendor/autoload.php';
 
+if (!is_file('.env')) {
+    copy('.env.example', '.env');
+}
+
 $dotenv = new Dotenv\Dotenv(__DIR__);
 $dotenv->load();
 

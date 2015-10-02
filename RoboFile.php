@@ -1,4 +1,6 @@
 <?php
+require __DIR__.'/bootstrap.php';
+
 /**
  * This is project's console commands configuration for Robo task runner.
  *
@@ -28,16 +30,23 @@ class RoboFile extends \Robo\Tasks
 
     /**
      * Run a php server
+     *
+     * @option $sync Sync the browser with the changes
      */
-    public function server()
+    public function server($opts = ['sync' => false])
     {
         $this->assets();
 
-        $this->say("server started at ".env('APP_CLI_SERVER_URL')."\n");
+        $server = $this->taskServer(parse_url(env('APP_CLI_SERVER_URL'), PHP_URL_PORT) ?: 80)->arg('server.php');
 
-        $this->taskServer(parse_url(env('APP_CLI_SERVER_URL'), PHP_URL_PORT) ?: 80)
-            ->arg('server.php')
-            ->run();
+        if ($opts['sync']) {
+            $server->background()->run();
+            $this->taskExec('node sync.js')
+                ->arg(env('APP_CLI_SERVER_URL'))
+                ->run();
+        } else {
+            $server->run();
+        }
     }
 
     /**
