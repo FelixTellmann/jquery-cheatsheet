@@ -169,16 +169,16 @@
         },
         {
             "name": "fol/builder",
-            "version": "v1.1.2",
+            "version": "v1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fol-project/builder.git",
-                "reference": "5515d81a45767d7d826f9ee808ab47611cb0b374"
+                "reference": "8680b1fff8eb3c4829a862242aa74a2caa72c5fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fol-project/builder/zipball/5515d81a45767d7d826f9ee808ab47611cb0b374",
-                "reference": "5515d81a45767d7d826f9ee808ab47611cb0b374",
+                "url": "https://api.github.com/repos/fol-project/builder/zipball/8680b1fff8eb3c4829a862242aa74a2caa72c5fe",
+                "reference": "8680b1fff8eb3c4829a862242aa74a2caa72c5fe",
                 "shasum": ""
             },
             "require": {
@@ -187,11 +187,11 @@
                 "fol/core": "^8.2",
                 "imagecow/imagecow": "^1.5",
                 "league/plates": "^3.1",
-                "oscarotero/psr7-middlewares": "^3.0",
+                "oscarotero/psr7-middlewares": "^3.3",
                 "relay/relay": "^0.2.0",
                 "symfony/yaml": "^2.7",
                 "webmozart/glob": "^3.1",
-                "willdurand/negotiation": "^1.4",
+                "willdurand/negotiation": "^2.0",
                 "zendframework/zend-diactoros": "^1.1"
             },
             "type": "library",
@@ -219,7 +219,7 @@
                 "html",
                 "static"
             ],
-            "time": "2015-10-01 00:30:55"
+            "time": "2015-10-03 11:08:32"
         },
         {
             "name": "fol/core",
@@ -472,16 +472,16 @@
         },
         {
             "name": "oscarotero/psr7-middlewares",
-            "version": "v3.2.0",
+            "version": "v3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/psr7-middlewares.git",
-                "reference": "95591c260c3483728b8b24db49f3acc57e4c418e"
+                "reference": "93839f1de5076955033d48f1775e3eaced44819e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/psr7-middlewares/zipball/95591c260c3483728b8b24db49f3acc57e4c418e",
-                "reference": "95591c260c3483728b8b24db49f3acc57e4c418e",
+                "url": "https://api.github.com/repos/oscarotero/psr7-middlewares/zipball/93839f1de5076955033d48f1775e3eaced44819e",
+                "reference": "93839f1de5076955033d48f1775e3eaced44819e",
                 "shasum": ""
             },
             "require": {
@@ -537,7 +537,7 @@
                 "psr-7",
                 "psr-messages"
             ],
-            "time": "2015-10-01 16:33:26"
+            "time": "2015-10-03 10:54:26"
         },
         {
             "name": "psr/http-message",
@@ -1182,25 +1182,25 @@
         },
         {
             "name": "willdurand/negotiation",
-            "version": "1.5.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/willdurand/Negotiation.git",
-                "reference": "2a59f2376557303e3fa91465ab691abb82945edf"
+                "reference": "a99d19330bfaa050fd09c3b8a10fc8ac258b9a55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/willdurand/Negotiation/zipball/2a59f2376557303e3fa91465ab691abb82945edf",
-                "reference": "2a59f2376557303e3fa91465ab691abb82945edf",
+                "url": "https://api.github.com/repos/willdurand/Negotiation/zipball/a99d19330bfaa050fd09c3b8a10fc8ac258b9a55",
+                "reference": "a99d19330bfaa050fd09c3b8a10fc8ac258b9a55",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=5.4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
@@ -1215,7 +1215,7 @@
             "authors": [
                 {
                     "name": "William Durand",
-                    "email": "william.durand1@gmail.com"
+                    "email": "will+git@drnd.me"
                 }
             ],
             "description": "Content Negotiation tools for PHP provided as a standalone library.",
@@ -1227,7 +1227,7 @@
                 "header",
                 "negotiation"
             ],
-            "time": "2015-10-01 07:42:40"
+            "time": "2015-10-02 12:52:52"
         },
         {
             "name": "zendframework/zend-diactoros",
