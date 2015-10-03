@@ -19,6 +19,10 @@
     --lemon: #CFF417;
 }
 
+@custom-media --tablet (min-width: 600px);
+@custom-media --desktop (min-width: 750px);
+@custom-media --tall (min-height: 800px);
+
 body {
     background: var(--black);
     font-family: 'Droid Sans', Helvetica, sans-serif;
@@ -139,7 +143,7 @@ fieldset, iframe {
         outline: 0;
     }
 
-    @media (min-width: 750px) {
+    @media (--desktop) {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -183,12 +187,7 @@ fieldset, iframe {
 
 /* Main content */
 .main-content {
-    display: flex;
     padding: 9.2rem 0 0;
-
-    @media (min-width: 750px) {
-        padding-top: 2.5rem;
-    }
 
     article {
         flex-shrink: 0;
@@ -202,7 +201,7 @@ fieldset, iframe {
             background: color(black a(.1));
             text-transform: uppercase;
 
-            @media (min-width: 750px) {
+            @media (--desktop) {
                 padding-top: 2rem;
             }
         }
@@ -213,18 +212,12 @@ fieldset, iframe {
         
         > div {
             padding: 1rem;
-            display: flex;
-            flex-shrink: 0;
-            align-content: flex-start;
 
             div {
                 min-width: 100px;
             }
 
-            div + div {
-                margin-left: 1rem;
-            }
-            section + section {
+            section {
                 margin-top: .8rem;
             }
         }
@@ -249,7 +242,7 @@ fieldset, iframe {
                 display: block;
                 padding: .15em .5em;
 
-                @media (min-height: 800px) {
+                @media (--tall) {
                     padding-top: .2em;
                     padding-bottom: .2em;
                 }
@@ -263,6 +256,31 @@ fieldset, iframe {
         a.removed {
             text-decoration: line-through;
         }
+    }
+
+    @media (--tablet) {
+        article > div {
+            display: flex;
+            flex-shrink: 0;
+            align-content: flex-start;
+
+            > div {
+                flex-grow: 1;
+            }
+
+            > div + div {
+                margin-left: 1rem;
+            }
+
+            section:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @media (--desktop) {
+        display: flex;
+        padding-top: 2.5rem;
     }
 }
 
