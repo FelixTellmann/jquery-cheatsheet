@@ -20,10 +20,5 @@ Installation:
 $ git clone https://github.com/oscarotero/jquery-cheatsheet.git
 $ cd jquery-cheatsheet
 $ composer install
-```
-
-To view the site (use `--sync` to use browser-sync:
-
-```
-$ php vendor/bin/robo server
+$ php vendor/bin/robo run
 ```

@@ -86,16 +86,16 @@
         },
         {
             "name": "erusev/parsedown",
-            "version": "1.5.4",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/erusev/parsedown.git",
-                "reference": "0e89e3714bda18973184d30646306bb0a482bd96"
+                "reference": "3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/0e89e3714bda18973184d30646306bb0a482bd96",
-                "reference": "0e89e3714bda18973184d30646306bb0a482bd96",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7",
+                "reference": "3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7",
                 "shasum": ""
             },
             "type": "library",
@@ -121,7 +121,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2015-08-03 09:24:05"
+            "time": "2015-10-04 16:44:32"
         },
         {
             "name": "evert/sitemap-php",
@@ -169,16 +169,16 @@
         },
         {
             "name": "fol/builder",
-            "version": "v1.1.4",
+            "version": "v1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fol-project/builder.git",
-                "reference": "8680b1fff8eb3c4829a862242aa74a2caa72c5fe"
+                "reference": "938dd6a8c20cffd974129c34a87ec2ccaa51fff0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fol-project/builder/zipball/8680b1fff8eb3c4829a862242aa74a2caa72c5fe",
-                "reference": "8680b1fff8eb3c4829a862242aa74a2caa72c5fe",
+                "url": "https://api.github.com/repos/fol-project/builder/zipball/938dd6a8c20cffd974129c34a87ec2ccaa51fff0",
+                "reference": "938dd6a8c20cffd974129c34a87ec2ccaa51fff0",
                 "shasum": ""
             },
             "require": {
@@ -219,7 +219,7 @@
                 "html",
                 "static"
             ],
-            "time": "2015-10-03 11:08:32"
+            "time": "2015-10-05 20:41:28"
         },
         {
             "name": "fol/core",
@@ -472,16 +472,16 @@
         },
         {
             "name": "oscarotero/psr7-middlewares",
-            "version": "v3.3.1",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/psr7-middlewares.git",
-                "reference": "93839f1de5076955033d48f1775e3eaced44819e"
+                "reference": "afab4b1c942befc3a872b96dd2ceadbad91a9ac4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/psr7-middlewares/zipball/93839f1de5076955033d48f1775e3eaced44819e",
-                "reference": "93839f1de5076955033d48f1775e3eaced44819e",
+                "url": "https://api.github.com/repos/oscarotero/psr7-middlewares/zipball/afab4b1c942befc3a872b96dd2ceadbad91a9ac4",
+                "reference": "afab4b1c942befc3a872b96dd2ceadbad91a9ac4",
                 "shasum": ""
             },
             "require": {
@@ -537,7 +537,7 @@
                 "psr-7",
                 "psr-messages"
             ],
-            "time": "2015-10-03 10:54:26"
+            "time": "2015-10-09 13:58:13"
         },
         {
             "name": "psr/http-message",
@@ -1137,16 +1137,16 @@
         },
         {
             "name": "webmozart/path-util",
-            "version": "2.2.2",
+            "version": "2.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/path-util.git",
-                "reference": "f1c8da76b3ed86a43058fa68f59c0e4f90c69f27"
+                "reference": "e5ac8b8a0ceaf7b36bff257be21780332880284d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/path-util/zipball/f1c8da76b3ed86a43058fa68f59c0e4f90c69f27",
-                "reference": "f1c8da76b3ed86a43058fa68f59c0e4f90c69f27",
+                "url": "https://api.github.com/repos/webmozart/path-util/zipball/e5ac8b8a0ceaf7b36bff257be21780332880284d",
+                "reference": "e5ac8b8a0ceaf7b36bff257be21780332880284d",
                 "shasum": ""
             },
             "require": {
@@ -1154,7 +1154,8 @@
                 "webmozart/assert": "~1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.6"
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1"
             },
             "type": "library",
             "extra": {
@@ -1178,7 +1179,7 @@
                 }
             ],
             "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths.",
-            "time": "2015-08-24 17:27:41"
+            "time": "2015-10-05 10:49:32"
         },
         {
             "name": "willdurand/negotiation",

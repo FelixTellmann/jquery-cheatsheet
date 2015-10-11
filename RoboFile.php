@@ -19,34 +19,25 @@ class RoboFile extends \Robo\Tasks
     }
 
     /**
-     * Generate the assets
+     * Run the server
      */
-    public function assets()
+    public function run()
     {
-        //Execute css/js generation
-        $this->taskExec('node node_modules/.bin/stylecow -c stylecow.json')->run();
-        $this->taskExec('node node_modules/.bin/r.js -o js.js')->run();
-    }
+        $url = env('APP_CLI_SERVER_URL');
 
-    /**
-     * Run a php server
-     *
-     * @option $sync Sync the browser with the changes
-     */
-    public function server($opts = ['sync' => false])
-    {
-        $this->assets();
+        //php server
+        $this->taskServer(parse_url($url, PHP_URL_PORT) ?: 80)
+            ->arg('server.php')
+            ->background()
+            ->run();
 
-        $server = $this->taskServer(parse_url(env('APP_CLI_SERVER_URL'), PHP_URL_PORT) ?: 80)->arg('server.php');
-
-        if ($opts['sync']) {
-            $server->background()->run();
-            $this->taskExec('node sync.js')
-                ->arg(env('APP_CLI_SERVER_URL'))
-                ->run();
-        } else {
-            $server->run();
-        }
+        //gulp + browser sync
+        $this->taskExec('node node_modules/.bin/gulp sync')
+            ->env([
+                'APP_URL' => $url,
+                'APP_SYNC_PORT' => 3000
+            ])
+            ->run();
     }
 
     /**
@@ -61,7 +52,9 @@ class RoboFile extends \Robo\Tasks
             ->copy('source/.htaccess', 'public/.htaccess')
             ->run();
 
-        $this->assets();
+        //gulp
+        $this->taskExec('node node_modules/.bin/gulp')
+            ->run();
 
         Site::build();
     }
