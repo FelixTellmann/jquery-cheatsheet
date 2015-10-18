@@ -169,26 +169,26 @@
         },
         {
             "name": "fol/builder",
-            "version": "v1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fol-project/builder.git",
-                "reference": "938dd6a8c20cffd974129c34a87ec2ccaa51fff0"
+                "reference": "5d2812c5c7a7827fec25753cc0a5a6321aaf9183"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fol-project/builder/zipball/938dd6a8c20cffd974129c34a87ec2ccaa51fff0",
-                "reference": "938dd6a8c20cffd974129c34a87ec2ccaa51fff0",
+                "url": "https://api.github.com/repos/fol-project/builder/zipball/5d2812c5c7a7827fec25753cc0a5a6321aaf9183",
+                "reference": "5d2812c5c7a7827fec25753cc0a5a6321aaf9183",
                 "shasum": ""
             },
             "require": {
                 "erusev/parsedown": "^1.5",
                 "evert/sitemap-php": "^1.2",
-                "fol/core": "^8.2",
+                "fol/core": "^9.0",
                 "imagecow/imagecow": "^1.5",
                 "league/plates": "^3.1",
-                "oscarotero/psr7-middlewares": "^3.3",
-                "relay/relay": "^0.2.0",
+                "oscarotero/psr7-middlewares": "^3.4",
+                "relay/relay": "^0.2",
                 "symfony/yaml": "^2.7",
                 "webmozart/glob": "^3.1",
                 "willdurand/negotiation": "^2.0",
@@ -219,25 +219,25 @@
                 "html",
                 "static"
             ],
-            "time": "2015-10-05 20:41:28"
+            "time": "2015-10-18 16:22:24"
         },
         {
             "name": "fol/core",
-            "version": "v8.2.0",
+            "version": "v9.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fol-project/core.git",
-                "reference": "dd432249a46f29a6e3174898c8ef297614915cae"
+                "reference": "65d55bf3138b554c9f98ec389afcb61190e77071"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fol-project/core/zipball/dd432249a46f29a6e3174898c8ef297614915cae",
-                "reference": "dd432249a46f29a6e3174898c8ef297614915cae",
+                "url": "https://api.github.com/repos/fol-project/core/zipball/65d55bf3138b554c9f98ec389afcb61190e77071",
+                "reference": "65d55bf3138b554c9f98ec389afcb61190e77071",
                 "shasum": ""
             },
             "require": {
                 "container-interop/container-interop": "*",
-                "php": ">=5.4.0"
+                "php": ">=5.5.0"
             },
             "type": "library",
             "autoload": {
@@ -268,7 +268,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-08-13 10:08:08"
+            "time": "2015-10-14 22:51:42"
         },
         {
             "name": "henrikbjorn/lurker",
@@ -1232,16 +1232,16 @@
         },
         {
             "name": "zendframework/zend-diactoros",
-            "version": "1.1.3",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "e2f5c12916c74da384058d0dfbc7fbc0b03d1181"
+                "reference": "3f0ce6c0ba2106e018fb514a9f09dbb91eb6bfd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/e2f5c12916c74da384058d0dfbc7fbc0b03d1181",
-                "reference": "e2f5c12916c74da384058d0dfbc7fbc0b03d1181",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/3f0ce6c0ba2106e018fb514a9f09dbb91eb6bfd0",
+                "reference": "3f0ce6c0ba2106e018fb514a9f09dbb91eb6bfd0",
                 "shasum": ""
             },
             "require": {
@@ -1278,7 +1278,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2015-08-10 20:04:20"
+            "time": "2015-10-16 15:24:05"
         }
     ],
     "packages-dev": [],
