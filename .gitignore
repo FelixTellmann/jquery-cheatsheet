@@ -26,7 +26,7 @@ $RECYCLE.BIN/
 
 # LOCAL DATA
 
-public
+build
 .env
 
 # DEPENDENCIES (composer, bower, npm, etc)

@@ -7,13 +7,12 @@ use Psr7Middlewares\Middleware;
  */
 class Site extends App
 {
-	public function init()
-	{
-		$this->servePages()->build(function ($middlewares) {
-			$middlewares[] = Middleware::minify();
-			return $middlewares;
-		});
+    protected $sourcesDir = 'source';
+    protected $buildDir = 'build';
 
-		$this->serveFiles();
-	}
+    public function __construct()
+    {
+        $this->addServer('pages', 'data/*.yml');
+        $this->addServer('files', 'files/*');
+    }
 }

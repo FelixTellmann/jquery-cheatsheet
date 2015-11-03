@@ -2,8 +2,8 @@
 	"files": [
 		{
 			"input": "source/css/styles.css",
-			"output": "public/css/styles.css",
-			"map": "public/css/styles.map"
+			"output": "build/css/styles.css",
+			"map": "build/css/styles.map"
 		}
 	],
 	"support": {

@@ -22,7 +22,7 @@ gulp.task('js', function (ready) {
         appDir: "source/js",
         baseUrl: '.',
         mainConfigFile : 'source/js/main.js',
-        dir: 'public/js',
+        dir: 'build/js',
         removeCombined: true,
         modules: [
             {
@@ -36,6 +36,35 @@ gulp.task('js', function (ready) {
         console.error('requirejs task failed', JSON.stringify(error))
         process.exit(1);
     });
+});
+
+gulp.task('img', function() {
+    gulp.src('build/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('build'));
+});
+
+gulp.task('html', function () {
+    gulp.src('build/**/*.html')
+        .pipe(htmlmin({
+            removeComments: true,
+            collapseWhitespace: true,
+            collapseBooleanAttributes: true,
+            removeAttributeQuotes: true,
+            removeRedundantAttributes: true,
+            useShortDoctype: true,
+            removeEmptyAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            removeEmptyElements: true,
+            minifyJS: true,
+            minifyCSS: true,
+            minifyURLS: {
+                output: 'rootRelative',
+                removeEmptyQueries: true
+            }
+        }))
+        .pipe(gulp.dest('build'));
 });
 
 gulp.task('sync', ['default'], function () {
@@ -66,3 +95,4 @@ gulp.task('sync', ['default'], function () {
 });
 
 gulp.task('default', ['css', 'js']);
+gulp.task('build', ['default', 'img', 'html']);

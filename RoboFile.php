@@ -41,19 +41,19 @@ class RoboFile extends \Robo\Tasks
     }
 
     /**
-     * Build the site in ./public
+     * Build the site in ./build
      */
     public function build()
     {
-        //Clear public
+        //Clear build
         $this->taskFilesystemStack()
-            ->remove('public')
-            ->mkdir('public')
-            ->copy('source/.htaccess', 'public/.htaccess')
+            ->remove('build')
+            ->mkdir('build')
+            ->copy('source/.htaccess', 'build/.htaccess')
             ->run();
 
         //gulp
-        $this->taskExec('node node_modules/.bin/gulp')
+        $this->taskExec('node node_modules/.bin/gulp build')
             ->run();
 
         Site::build();
@@ -66,7 +66,7 @@ class RoboFile extends \Robo\Tasks
     public function publish()
     {
         $this->taskRsync()
-            ->fromPath('public/')
+            ->fromPath('build/')
             ->toPath(env('APP_PUBLISH_RSYNC'))
             ->recursive()
             ->run();
