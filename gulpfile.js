@@ -1,6 +1,8 @@
 var gulp        = require('gulp'),
     path        = require('path'),
     stylecow    = require('gulp-stylecow'),
+    imagemin    = require('gulp-imagemin'),
+    htmlmin     = require('gulp-htmlmin'),
     rename      = require('gulp-rename'),
     requirejs   = require('requirejs'),
     browserSync = require('browser-sync').create();

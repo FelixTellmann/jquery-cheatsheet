@@ -45,18 +45,18 @@ class RoboFile extends \Robo\Tasks
      */
     public function build()
     {
-        //Clear build
+        //Remove the previous building
         $this->taskFilesystemStack()
             ->remove('build')
             ->mkdir('build')
             ->copy('source/.htaccess', 'build/.htaccess')
             ->run();
 
-        //gulp
-        $this->taskExec('node node_modules/.bin/gulp build')
-            ->run();
+        //Build the site
+        (new Site())->build($this->getOutput());
 
-        Site::build();
+        //Generate + optimize
+        $this->taskExec('node node_modules/.bin/gulp build')->run();
     }
 
     /**

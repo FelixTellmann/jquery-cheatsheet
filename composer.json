@@ -21,8 +21,7 @@
         "php": ">=5.5.0",
         "fol/builder": "^2.0",
         "vlucas/phpdotenv": "^2.0",
-        "codegyre/robo": "^0.5.4",
-        "mrclay/minify": "^2.2"
+        "codegyre/robo": "^0.5.4"
     },
     "scripts": {
         "post-install-cmd": "php vendor/bin/robo install"
