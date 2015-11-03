@@ -1,10 +1,11 @@
 <?php
+
 foreach ($sections as $section) {
     foreach ($section['items'] as $item) {
         $data = [
             'sort' => preg_replace('/[^\w]/', '', $item['text']),
             'from' => $item['from'],
-            'type' => $slug
+            'type' => $slug,
         ];
 
         if (!empty($item['deprecated'])) {

@@ -1,4 +1,5 @@
 <?php
+
 require __DIR__.'/bootstrap.php';
 
 /**
@@ -9,7 +10,7 @@ require __DIR__.'/bootstrap.php';
 class RoboFile extends \Robo\Tasks
 {
     /**
-     * Install all npm and bower components
+     * Install all npm and bower components.
      */
     public function install()
     {
@@ -19,7 +20,7 @@ class RoboFile extends \Robo\Tasks
     }
 
     /**
-     * Run the server
+     * Run the server.
      */
     public function run()
     {
@@ -35,13 +36,13 @@ class RoboFile extends \Robo\Tasks
         $this->taskExec('node node_modules/.bin/gulp sync')
             ->env([
                 'APP_URL' => $url,
-                'APP_SYNC_PORT' => 3000
+                'APP_SYNC_PORT' => 3000,
             ])
             ->run();
     }
 
     /**
-     * Build the site in ./build
+     * Build the site in ./build.
      */
     public function build()
     {
@@ -61,7 +62,7 @@ class RoboFile extends \Robo\Tasks
 
     /**
      * Publish the static site in the server using rsync
-     * You can configure the path connection in .env > APP_PUBLISH_RSYNC
+     * You can configure the path connection in .env > APP_PUBLISH_RSYNC.
      */
     public function publish()
     {
