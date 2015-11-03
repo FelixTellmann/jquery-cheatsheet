@@ -1,4 +1,5 @@
 <?php
+
 if (!ini_get('date.timezone')) {
     ini_set('date.timezone', 'Europe/Madrid');
 }
@@ -11,8 +12,8 @@ ini_set('display_startup_errors', 1);
 //Init global libraries
 $composer = include __DIR__.'/vendor/autoload.php';
 
-if (!is_file('.env')) {
-    copy('.env.example', '.env');
+if (!is_file(__DIR__.'/.env')) {
+    copy(__DIR__.'/.env.example', __DIR__.'/.env');
 }
 
 $dotenv = new Dotenv\Dotenv(__DIR__);
