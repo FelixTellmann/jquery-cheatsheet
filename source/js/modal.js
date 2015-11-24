@@ -1,7 +1,7 @@
 define([
     'jquery',
-    'settings',
-    'versions-selector',
+    './settings',
+    './versions-selector',
     'magnific-popup'
 ], function ($, settings, versions) {
     

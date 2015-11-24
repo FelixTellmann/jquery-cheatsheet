@@ -1,53 +1,62 @@
-var gulp        = require('gulp'),
-    path        = require('path'),
-    stylecow    = require('gulp-stylecow'),
-    imagemin    = require('gulp-imagemin'),
-    htmlmin     = require('gulp-htmlmin'),
-    rename      = require('gulp-rename'),
-    requirejs   = require('requirejs'),
-    browserSync = require('browser-sync').create();
+var gulp     = require('gulp'),
+    path     = require('path'),
+    stylecow = require('gulp-stylecow'),
+    imagemin = require('gulp-imagemin'),
+    htmlmin  = require('gulp-htmlmin'),
+    rename   = require('gulp-rename'),
+    sync     = require('browser-sync').create(),
+    webpack  = require('webpack'),
+    env      = process.env;
 
 gulp.task('css', function() {
     var config = require('./stylecow.json');
 
+    config.code = env.APP_DEV ? 'normal' : 'minify';
+
     config.files.forEach(function (file) {
-        gulp.src(file.input)
+        gulp
+            .src(file.input)
             .pipe(stylecow(config))
+            .on('error', function (error) {
+                console.log(error.toString());
+                this.emit('end');
+            })
             .pipe(rename(file.output))
-            .pipe(gulp.dest('./'))
-            .pipe(browserSync.stream());
+            .pipe(gulp.dest(''))
+            .pipe(sync.stream());
     });
 });
 
-gulp.task('js', function (ready) {
-    requirejs.optimize({
-        appDir: "source/js",
-        baseUrl: '.',
-        mainConfigFile : 'source/js/main.js',
-        dir: 'build/js',
-        removeCombined: true,
-        modules: [
-            {
-                name: 'main',
-                include: ['../../bower_components/almond/almond.js']
-            }
-        ]
-    }, function () {
-        ready();
-    }, function (error) {
-        console.error('requirejs task failed', JSON.stringify(error))
-        process.exit(1);
+gulp.task('js', function(done) {
+    var config = require('./webpack.config');
+
+    if (!env.APP_DEV) {
+        config.plugins = config.plugins.concat(
+            new webpack.optimize.DedupePlugin(),
+            new webpack.optimize.UglifyJsPlugin()
+        );
+    }
+
+    webpack(config, function (err, stats) {
+        done();
     });
 });
 
 gulp.task('img', function() {
-    gulp.src('build/*')
+    gulp
+        .src([
+            'build/**/*.jpg',
+            'build/**/*.png',
+            'build/**/*.gif',
+            'build/**/*.svg'
+        ])
         .pipe(imagemin())
         .pipe(gulp.dest('build'));
 });
 
 gulp.task('html', function () {
-    gulp.src('build/**/*.html')
+    gulp
+        .src('build/**/*.html')
         .pipe(htmlmin({
             removeComments: true,
             collapseWhitespace: true,
@@ -69,8 +78,8 @@ gulp.task('html', function () {
         .pipe(gulp.dest('build'));
 });
 
-gulp.task('sync', ['default'], function () {
-    browserSync.watch('source/**/*', function (event, file) {
+gulp.task('sync', ['css', 'js'], function () {
+    sync.watch('source/**/*', function (event, file) {
         if (event !== 'change') {
             return;
         }
@@ -78,16 +87,16 @@ gulp.task('sync', ['default'], function () {
         switch (path.extname(file)) {
             case '.yml':
             case '.php':
-                browserSync.reload('*.html');
+                sync.reload('*.html');
                 return;
 
             default:
-                browserSync.reload(path.basename(file));
+                sync.reload(path.basename(file));
                 return;
         }
     });
 
-    browserSync.init({
+    sync.init({
         port: process.env.APP_SYNC_PORT || 3000,
         proxy: process.env.APP_URL || 'http://127.0.0.1:8000'
     });
@@ -96,5 +105,4 @@ gulp.task('sync', ['default'], function () {
     gulp.watch('source/**/*.css', ['css']);
 });
 
-gulp.task('default', ['css', 'js']);
-gulp.task('build', ['default', 'img', 'html']);
+gulp.task('default', ['css', 'js', 'img', 'html']);

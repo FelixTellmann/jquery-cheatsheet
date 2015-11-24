@@ -10,16 +10,6 @@ require __DIR__.'/bootstrap.php';
 class RoboFile extends \Robo\Tasks
 {
     /**
-     * Install all npm and bower components.
-     */
-    public function install()
-    {
-        //npm + bower
-        $this->taskNpmInstall()->run();
-        $this->taskBowerInstall('node_modules/.bin/bower')->run();
-    }
-
-    /**
      * Run the server.
      */
     public function run()
@@ -28,6 +18,9 @@ class RoboFile extends \Robo\Tasks
 
         //php server
         $this->taskServer(parse_url($url, PHP_URL_PORT) ?: 80)
+            ->env([
+                'APP_DEV' => 'true',
+            ])
             ->arg('server.php')
             ->background()
             ->run();
@@ -35,14 +28,15 @@ class RoboFile extends \Robo\Tasks
         //gulp + browser sync
         $this->taskExec('node node_modules/.bin/gulp sync')
             ->env([
+                'APP_DEV' => 'true',
                 'APP_URL' => $url,
-                'APP_SYNC_PORT' => 3000,
+                'APP_SYNC_PORT' => env('APP_SYNC_PORT'),
             ])
             ->run();
     }
 
     /**
-     * Build the site in ./build.
+     * Build the site.
      */
     public function build()
     {
@@ -50,19 +44,19 @@ class RoboFile extends \Robo\Tasks
         $this->taskFilesystemStack()
             ->remove('build')
             ->mkdir('build')
-            ->copy('source/.htaccess', 'build/.htaccess')
+            ->copy('source/htaccess', 'build/.htaccess')
             ->run();
 
         //Build the site
         (new Site())->build($this->getOutput());
 
         //Generate + optimize
-        $this->taskExec('node node_modules/.bin/gulp build')->run();
+        $this->taskExec('node node_modules/.bin/gulp')->run();
     }
 
     /**
      * Publish the static site in the server using rsync
-     * You can configure the path connection in .env > APP_PUBLISH_RSYNC.
+     * You have to configure the path connection in .env > APP_PUBLISH_RSYNC.
      */
     public function publish()
     {

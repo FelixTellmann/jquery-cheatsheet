@@ -1,10 +1,5 @@
 {
-    "name": "fol/static",
-    "type": "library",
-    "description": "Fol version to build static sites",
-    "keywords": ["framework"],
-    "homepage": "https://github.com/fol-project/static",
-    "license": "AGPL-3.0",
+    "homepage": "http://oscarotero.com/jquery",
     "authors": [
         {
             "name": "Oscar Otero",
@@ -15,16 +10,16 @@
     ],
     "support": {
         "email": "oom@oscarotero.com",
-        "issues": "https://github.com/fol-project/static/issues"
+        "issues": "https://github.com/oscarotero/jquery-cheatsheet/issues"
     },
     "require": {
         "php": ">=5.5.0",
         "fol/builder": "^2.0",
         "vlucas/phpdotenv": "^2.0",
-        "codegyre/robo": "^0.5.4"
+        "codegyre/robo": "^0.6.0"
     },
     "scripts": {
-        "post-install-cmd": "php vendor/bin/robo install"
+        "post-install-cmd": "npm install"
     },
     "autoload": {
         "classmap": ["Site.php"]

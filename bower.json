@@ -6,8 +6,6 @@
     "jquery": "*",
     "magnific-popup": "*",
     "selectize": "*",
-    "requirejs": "*",
-    "normalize.css": "~3.0.3",
-    "almond": "~0.3.1"
+    "normalize.css": "~3.0.3"
   }
 }
