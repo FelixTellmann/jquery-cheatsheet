@@ -6,6 +6,7 @@ var gulp     = require('gulp'),
     rename   = require('gulp-rename'),
     sync     = require('browser-sync').create(),
     webpack  = require('webpack'),
+    url      = require('url'),
     env      = process.env;
 
 gulp.task('css', function() {
@@ -37,7 +38,7 @@ gulp.task('js', function(done) {
         );
     }
 
-    config.output.publicPath = env.APP_URL.split('/', 2)[1] + '/js/';
+    config.output.publicPath = url.parse(env.APP_URL).pathname + '/js/';
 
     webpack(config, function (err, stats) {
         done();
@@ -69,7 +70,6 @@ gulp.task('html', function () {
             removeEmptyAttributes: true,
             removeScriptTypeAttributes: true,
             removeStyleLinkTypeAttributes: true,
-            removeEmptyElements: true,
             minifyJS: true,
             minifyCSS: true,
             minifyURLS: {

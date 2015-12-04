@@ -50,7 +50,11 @@ class RoboFile extends \Robo\Tasks
         (new Site())->build($this->getOutput());
 
         //Generate + optimize
-        $this->taskExec('node node_modules/.bin/gulp')->run();
+        $this->taskExec('node node_modules/.bin/gulp')
+            ->env([
+                'APP_URL' => env('APP_URL'),
+            ])
+            ->run();
     }
 
     /**
