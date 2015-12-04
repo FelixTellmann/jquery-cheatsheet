@@ -17,7 +17,7 @@
         ?>
 
         <li>
-            <a class="<?= $class ?>" title="<?= $item['title'] ?>" href="http://api.jquery.com/<?= $item['doc'] ?>/" data-src="<?= isset($item['src']) ? $item['src'] : ''; ?>">
+            <a class="<?= $class ?>" title="<?= $item['title'] ?>" href="https://api.jquery.com/<?= $item['doc'] ?>/" data-src="<?= isset($item['src']) ? $item['src'] : ''; ?>">
                 <?= $item['text'] ?>
             </a>
         </li>

@@ -10,13 +10,13 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="author" content="Oscar Otero - http://oscarotero.com">
+        <meta name="author" content="Oscar Otero - https://oscarotero.com">
         <meta name="title" content="jQuery Cheat Sheet">
         <meta name="description" content="jQuery cheat sheet in HTML with links to the original API documentation">
         <meta name="keywords" content="jQuery, javascript, cheatsheet, api, resource, web developer">
 
         <meta property="og:title" content="jQuery Cheat Sheet">
-        <meta property="og:image" content="http://oscarotero.com/jquery/jquery.png">
+        <meta property="og:image" content="<?= $this->url('jquery.png') ?>">
         <meta property="og:description" content="jQuery cheat sheet in HTML with links to the original API documentation. Created by Oscar Otero">
 
         <meta name="twitter:card" content="summary_large_image">
@@ -24,7 +24,7 @@
         <meta name="twitter:creator" content="@misteroom">
         <meta name="twitter:title" content="JQuery Cheat Sheet">
         <meta name="twitter:description" content="jQuery cheat sheet in HTML with links to the original API documentation. Created by Oscar Otero">
-        <meta name="twitter:image" content="http://oscarotero.com/jquery/jquery.png">
+        <meta name="twitter:image" content="<?= $this->url('jquery.png') ?>">
 
         <link rel="stylesheet" href="css/styles.css" type="text/css">
         <script type="text/javascript" src="js/main.js"></script>
@@ -94,7 +94,7 @@
                 <label><input type="radio" name="open_links" value="same-window"> Same window</label>
             </fieldset>
 
-            <p><a href="https://github.com/oscarotero/jquery-cheatsheet" title="Get the code from github">Source code</a> | by <a href="http://twitter.com/misteroom">@misteroom</a></p>
+            <p><a href="https://github.com/oscarotero/jquery-cheatsheet" title="Get the code from github">Source code</a> | by <a href="https://twitter.com/misteroom">@misteroom</a></p>
         </div>
 
         <div id="modal" class="mfp-hide">
@@ -107,10 +107,7 @@
             </div>
         </div>
 
-        <?php if (env('APP_DEV')): ?>
-        <!-- stylecow live reload -->
-        <script type="text/javascript" src="//127.0.0.1:8081"></script>
-        <?php else: ?>
+        <?php if (!env('APP_DEV')): ?>
         <script type="text/javascript">
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-110819-12']);

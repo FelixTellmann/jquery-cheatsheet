@@ -37,6 +37,8 @@ gulp.task('js', function(done) {
         );
     }
 
+    config.output.publicPath = env.APP_URL.split('/', 2)[1] + '/js/';
+
     webpack(config, function (err, stats) {
         done();
     });

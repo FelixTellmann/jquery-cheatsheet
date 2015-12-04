@@ -44,7 +44,6 @@ class RoboFile extends \Robo\Tasks
         $this->taskFilesystemStack()
             ->remove('build')
             ->mkdir('build')
-            ->copy('source/htaccess', 'build/.htaccess')
             ->run();
 
         //Build the site
@@ -60,6 +59,8 @@ class RoboFile extends \Robo\Tasks
      */
     public function publish()
     {
+        $this->build();
+
         $this->taskRsync()
             ->fromPath('build/')
             ->toPath(env('APP_PUBLISH_RSYNC'))
