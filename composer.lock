@@ -429,29 +429,30 @@
         },
         {
             "name": "oscarotero/psr7-middlewares",
-            "version": "v3.8.1",
+            "version": "v3.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/psr7-middlewares.git",
-                "reference": "7dba56a806ab78937a1ef8b4ab5dba211bab0dcb"
+                "reference": "083d881068534bb951b59216abaee188102f988a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/psr7-middlewares/zipball/7dba56a806ab78937a1ef8b4ab5dba211bab0dcb",
-                "reference": "7dba56a806ab78937a1ef8b4ab5dba211bab0dcb",
+                "url": "https://api.github.com/repos/oscarotero/psr7-middlewares/zipball/083d881068534bb951b59216abaee188102f988a",
+                "reference": "083d881068534bb951b59216abaee188102f988a",
                 "shasum": ""
             },
             "require": {
-                "container-interop/container-interop": "^1.1",
                 "php": ">=5.5.0",
                 "phpseclib/phpseclib": "^2.0"
             },
             "require-dev": {
-                "aura/router": "3.0.0-beta2",
+                "aura/router": "^3.0",
                 "aura/session": "2.*",
+                "imagecow/imagecow": "^1.5",
+                "league/route": "2.0.0-RC1",
                 "m6web/firewall": "~1.0",
                 "matthiasmullie/scrapbook": "dev-master",
-                "maximebf/debugbar": "~1.10",
+                "maximebf/debugbar": "~1.11",
                 "mobiledetect/mobiledetectlib": "^2.8",
                 "mrclay/minify": "^2.2",
                 "neomerx/cors-psr7": "^0.2.0",
@@ -466,6 +467,8 @@
             "suggest": {
                 "aura/router": "To use Middleware::auraRouter",
                 "aura/session": "To use Middleware::auraSession",
+                "imagecow/imagecow": "To use Middleware::imageTransformer",
+                "league/route": "To use Middleware::leagueRoute",
                 "m6web/firewall": "To use Middleware::firewall()",
                 "maximebf/debugbar": "To use Middleware::debugBar()",
                 "mobiledetect/mobiledetectlib": "To use Middleware::detectDevice",
@@ -502,7 +505,7 @@
                 "psr-7",
                 "psr-messages"
             ],
-            "time": "2015-11-30 07:21:09"
+            "time": "2015-12-21 15:40:15"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -1210,16 +1213,16 @@
         },
         {
             "name": "webmozart/glob",
-            "version": "3.1.1",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/glob.git",
-                "reference": "44fd5671153c550a0b772d8f819bff7d913e646f"
+                "reference": "1f4cc4d694b038aa53b1fe25a58ecfd6d9053b90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/glob/zipball/44fd5671153c550a0b772d8f819bff7d913e646f",
-                "reference": "44fd5671153c550a0b772d8f819bff7d913e646f",
+                "url": "https://api.github.com/repos/webmozart/glob/zipball/1f4cc4d694b038aa53b1fe25a58ecfd6d9053b90",
+                "reference": "1f4cc4d694b038aa53b1fe25a58ecfd6d9053b90",
                 "shasum": ""
             },
             "require": {
@@ -1228,12 +1231,13 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1",
                 "symfony/filesystem": "^2.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -1252,20 +1256,20 @@
                 }
             ],
             "description": "A PHP implementation of Ant's glob.",
-            "time": "2015-08-24 13:32:28"
+            "time": "2015-12-23 11:03:01"
         },
         {
             "name": "webmozart/path-util",
-            "version": "2.2.3",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/path-util.git",
-                "reference": "e5ac8b8a0ceaf7b36bff257be21780332880284d"
+                "reference": "d939f7edc24c9a1bb9c0dee5cb05d8e859490725"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/path-util/zipball/e5ac8b8a0ceaf7b36bff257be21780332880284d",
-                "reference": "e5ac8b8a0ceaf7b36bff257be21780332880284d",
+                "url": "https://api.github.com/repos/webmozart/path-util/zipball/d939f7edc24c9a1bb9c0dee5cb05d8e859490725",
+                "reference": "d939f7edc24c9a1bb9c0dee5cb05d8e859490725",
                 "shasum": ""
             },
             "require": {
@@ -1298,7 +1302,7 @@
                 }
             ],
             "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths.",
-            "time": "2015-10-05 10:49:32"
+            "time": "2015-12-17 08:42:14"
         },
         {
             "name": "willdurand/negotiation",
@@ -1351,16 +1355,16 @@
         },
         {
             "name": "zendframework/zend-diactoros",
-            "version": "1.2.0",
+            "version": "1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "edfda00b9831630c19c411f85f50a47bb66af457"
+                "reference": "4b0e6b9122b9df484a3b2e15e4fd88aa7d8861ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/edfda00b9831630c19c411f85f50a47bb66af457",
-                "reference": "edfda00b9831630c19c411f85f50a47bb66af457",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/4b0e6b9122b9df484a3b2e15e4fd88aa7d8861ad",
+                "reference": "4b0e6b9122b9df484a3b2e15e4fd88aa7d8861ad",
                 "shasum": ""
             },
             "require": {
@@ -1377,8 +1381,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2-dev",
-                    "dev-develop": "1.3-dev"
+                    "dev-master": "1.3-dev",
+                    "dev-develop": "1.4-dev"
                 }
             },
             "autoload": {
@@ -1397,7 +1401,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2015-11-24 19:16:22"
+            "time": "2015-12-22 22:44:06"
         }
     ],
     "packages-dev": [],
