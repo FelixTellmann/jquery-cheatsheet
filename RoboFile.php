@@ -19,6 +19,7 @@ class RoboFile extends \Robo\Tasks
         //php server
         $this->taskServer(parse_url($url, PHP_URL_PORT) ?: 80)
             ->env([
+                'APP_URL' => $url,
                 'APP_DEV' => 'true',
             ])
             ->arg('server.php')

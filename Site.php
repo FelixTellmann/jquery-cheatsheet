@@ -7,11 +7,10 @@ use Fol\Builder\App;
  */
 class Site extends App
 {
-    protected $sourcesDir = 'source';
-    protected $buildDir = 'build';
-
     public function __construct()
     {
+        $this->setUrl(env('APP_URL'));
+
         $this->addServer('pages', 'data/*.yml');
         $this->addServer('files', 'files/*');
     }

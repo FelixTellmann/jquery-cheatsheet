@@ -5,23 +5,17 @@ let path    = require("path"),
     bower   = require("bower-webpack-plugin");
 
 module.exports = {
-    context: __dirname + '/source/js',
+    context: __dirname + '/assets/js',
     entry: {
         main: './main.js'
     },
     output: {
-        path: __dirname + '/build/js',
-        filename: 'main.js'
-    },
-    module: {
-        loaders: [
-            {
-                test: /\.css$/,
-                loader: "style!css"
-            }
-        ]
+        path: __dirname + '/source/js',
+        filename: '[name].js'
     },
     plugins: [
-        new bower()
+        new bower({
+            excludes: /\.css$/
+        })
     ]
 };
