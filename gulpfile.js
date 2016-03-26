@@ -9,6 +9,11 @@ var gulp     = require('gulp'),
     url      = require('url'),
     env      = process.env;
 
+gulp.task('apache', function () {
+    gulp.src('bower_components/apache-server-configs/dist/.htaccess')
+    .pipe(gulp.dest('build'))
+});
+
 gulp.task('css', function() {
     var config = require('./stylecow.json');
 
@@ -107,4 +112,4 @@ gulp.task('sync', ['css', 'js'], function () {
     gulp.watch('source/**/*.css', ['css']);
 });
 
-gulp.task('default', ['css', 'js', 'img', 'html']);
+gulp.task('default', ['css', 'js', 'img', 'html', 'apache']);

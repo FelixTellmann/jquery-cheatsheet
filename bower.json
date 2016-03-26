@@ -6,6 +6,7 @@
     "jquery": "*",
     "magnific-popup": "*",
     "selectize": "*",
-    "normalize.css": "~3.0.3"
+    "normalize.css": "~3.0.3",
+    "apache-server-configs": "^2.14.0"
   }
 }
