@@ -21,9 +21,6 @@
         "codegyre/robo": "^0.6.0",
         "willdurand/negotiation": "^2.0"
     },
-    "scripts": {
-        "post-install-cmd": "npm install"
-    },
     "autoload": {
         "classmap": ["Site.php"]
     }

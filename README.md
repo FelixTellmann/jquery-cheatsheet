@@ -20,5 +20,6 @@ Installation:
 $ git clone https://github.com/oscarotero/jquery-cheatsheet.git
 $ cd jquery-cheatsheet
 $ composer install
+$ npm install
 $ php vendor/bin/robo run
 ```
