@@ -66,7 +66,7 @@ class RoboFile extends \Robo\Tasks
     }
 
     /**
-     * Remove the previous building
+     * Remove the previous building.
      */
     private function clean()
     {

@@ -2,8 +2,6 @@
 
 use Psr7Middlewares\Middleware;
 use League\Plates\Engine;
-use Monolog\Logger;
-use Monolog\Handler\ErrorLogHandler;
 
 /**
  * Class to generate the site and serve files.
