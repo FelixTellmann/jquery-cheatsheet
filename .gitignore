@@ -1,38 +1,11 @@
-# MACOSX
-
-.DS_Store
-.AppleDouble
-.LSOverride
-._*
-.Spotlight-V100
-.Trashes
-
-# Icon must ends with two \r.
-Icon
-
-
-# WINDOWS
-
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-*.cab
-*.msi
-*.msm
-*.msp
-
-
 # LOCAL DATA
 
 build
-data
 .env
 
 
 # DEPENDENCIES (composer, bower, npm, etc)
 
-composer.phar
 vendor
 bower_components
 node_modules
