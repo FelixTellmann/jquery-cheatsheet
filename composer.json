@@ -14,10 +14,12 @@
     },
     "require": {
         "php": ">=5.5.0",
-        "fol/builder": "^2.1.1",
+        "oscarotero/statico": "^1.0",
+        "oscarotero/psr7-middlewares": "^3.14",
+        "oscarotero/env": "^1.0",
         "vlucas/phpdotenv": "^2.0",
         "codegyre/robo": "^0.6.0",
-        "oscarotero/env": "^1.0"
+        "willdurand/negotiation": "^2.0"
     },
     "scripts": {
         "post-install-cmd": "npm install"

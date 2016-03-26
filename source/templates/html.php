@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -16,7 +17,7 @@
         <meta name="keywords" content="jQuery, javascript, cheatsheet, api, resource, web developer">
 
         <meta property="og:title" content="jQuery Cheat Sheet">
-        <meta property="og:image" content="<?= $this->url('jquery.png') ?>">
+        <meta property="og:image" content="<?= $app->getUrl('jquery.png') ?>">
         <meta property="og:description" content="jQuery cheat sheet in HTML with links to the original API documentation. Created by Oscar Otero">
 
         <meta name="twitter:card" content="summary_large_image">
@@ -24,10 +25,10 @@
         <meta name="twitter:creator" content="@misteroom">
         <meta name="twitter:title" content="JQuery Cheat Sheet">
         <meta name="twitter:description" content="jQuery cheat sheet in HTML with links to the original API documentation. Created by Oscar Otero">
-        <meta name="twitter:image" content="<?= $this->url('jquery.png') ?>">
+        <meta name="twitter:image" content="<?= $app->getUrl('jquery.png') ?>">
 
-        <link rel="stylesheet" href="css/styles.css" type="text/css">
-        <script type="text/javascript" src="<?= $this->url('js/main.js') ?>"></script>
+        <link rel="stylesheet" href="<?= $app->getUrl('css/styles.css') ?>" type="text/css">
+        <script type="text/javascript" src="<?= $app->getUrl('js/main.js') ?>"></script>
     </head>
 
     <body>
@@ -106,24 +107,5 @@
                 <iframe src="about:blank"></iframe>
             </div>
         </div>
-
-        <?php if (!env('APP_DEV')): ?>
-        <!-- Piwik -->
-        <script type="text/javascript">
-            var _paq = _paq || [];
-            _paq.push(["disableCookies"]);
-            _paq.push(['trackPageView']);
-            _paq.push(['enableLinkTracking']);
-            (function() {
-                var u="//oscarotero.com/piwik/";
-                _paq.push(['setTrackerUrl', u+'piwik.php']);
-                _paq.push(['setSiteId', 1]);
-                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-                g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-            })();
-        </script>
-        <noscript><p><img src="//oscarotero.com/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-        <!-- End Piwik Code -->
-        <?php endif ?>
     </body>
 </html>

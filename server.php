@@ -2,4 +2,4 @@
 
 require __DIR__.'/bootstrap.php';
 
-Site::run();
+Site::serve();

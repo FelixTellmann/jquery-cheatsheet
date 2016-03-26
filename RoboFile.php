@@ -14,25 +14,23 @@ class RoboFile extends \Robo\Tasks
      */
     public function run()
     {
-        $url = env('APP_CLI_SERVER_URL');
+        $this->clean();
+
+        $env = [
+            'APP_DEV' => 'true',
+            'APP_URL' => 'http://127.0.0.1:8000',
+        ];
 
         //php server
-        $this->taskServer(parse_url($url, PHP_URL_PORT) ?: 80)
-            ->env([
-                'APP_URL' => $url,
-                'APP_DEV' => 'true',
-            ])
+        $this->taskServer(parse_url($env['APP_URL'], PHP_URL_PORT))
+            ->env($env)
             ->arg('server.php')
             ->background()
             ->run();
 
         //gulp + browser sync
         $this->taskExec('node node_modules/.bin/gulp sync')
-            ->env([
-                'APP_DEV' => 'true',
-                'APP_URL' => $url,
-                'APP_SYNC_PORT' => env('APP_SYNC_PORT'),
-            ])
+            ->env($env)
             ->run();
     }
 
@@ -41,20 +39,14 @@ class RoboFile extends \Robo\Tasks
      */
     public function build()
     {
-        //Remove the previous building
-        $this->taskFilesystemStack()
-            ->remove('build')
-            ->mkdir('build')
-            ->run();
+        $this->clean();
 
         //Build the site
-        (new Site())->build($this->getOutput());
+        Site::build();
 
         //Generate + optimize
         $this->taskExec('node node_modules/.bin/gulp')
-            ->env([
-                'APP_URL' => env('APP_URL'),
-            ])
+            ->env(['APP_URL' => env('APP_URL')])
             ->run();
     }
 
@@ -70,6 +62,17 @@ class RoboFile extends \Robo\Tasks
             ->fromPath('build/')
             ->toPath(env('APP_PUBLISH_RSYNC'))
             ->recursive()
+            ->run();
+    }
+
+    /**
+     * Remove the previous building
+     */
+    private function clean()
+    {
+        $this->taskFilesystemStack()
+            ->remove('build')
+            ->mkdir('build')
             ->run();
     }
 }

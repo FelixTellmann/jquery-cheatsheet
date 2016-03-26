@@ -12,7 +12,12 @@ var gulp     = require('gulp'),
 gulp.task('css', function() {
     var config = require('./stylecow.json');
 
-    config.code = env.APP_DEV ? 'normal' : 'minify';
+    if (env.APP_DEV) {
+        config.code = 'normal';
+        config.cssErrors = true;
+    } else {
+        config.code = 'minify';
+    }
 
     config.files.forEach(function (file) {
         gulp
@@ -82,10 +87,6 @@ gulp.task('html', function () {
 
 gulp.task('sync', ['css', 'js'], function () {
     sync.watch('source/**/*', function (event, file) {
-        if (event !== 'change') {
-            return;
-        }
-
         switch (path.extname(file)) {
             case '.yml':
             case '.php':
@@ -99,8 +100,7 @@ gulp.task('sync', ['css', 'js'], function () {
     });
 
     sync.init({
-        port: process.env.APP_SYNC_PORT || 3000,
-        proxy: process.env.APP_URL || 'http://127.0.0.1:8000'
+        proxy: process.env.APP_URL
     });
 
     gulp.watch('source/**/*.js', ['js']);
