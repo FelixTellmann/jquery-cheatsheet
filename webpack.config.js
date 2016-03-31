@@ -1,16 +1,16 @@
 "use strict";
 
-let path    = require("path"),
-    webpack = require("webpack"),
-    bower   = require("bower-webpack-plugin");
+const path    = require("path"),
+      webpack = require("webpack"),
+      bower   = require("bower-webpack-plugin");
 
 module.exports = {
-    context: __dirname + '/source/js',
+    context: path.join(__dirname, 'source/js'),
     entry: {
         main: './main.js'
     },
     output: {
-        path: __dirname + '/build/js',
+        path: path.join(__dirname, '/build/js'),
         filename: '[name].js'
     },
     plugins: [
