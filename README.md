@@ -4,6 +4,8 @@ jquery-cheatsheet
 jQuery interactive cheatsheet
 http://oscarotero.com/jquery/
 
+![Screenshot](https://github.com/oscarotero/jquery-cheatsheet/blob/master/screen-shot.png)
+
 
 Requirements:
 -------------
