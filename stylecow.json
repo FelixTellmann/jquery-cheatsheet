@@ -2,8 +2,11 @@
 	"files": [
 		{
 			"input": "source/css/styles.css",
-			"output": "build/css/styles.css",
-			"map": "build/css/styles.map"
+			"output": "build/css/styles.css"
+		},
+		{
+			"input": "source/css/styles-print.css",
+			"output": "build/css/styles-print.css"
 		}
 	],
 	"support": {

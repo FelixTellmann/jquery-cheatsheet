@@ -27,7 +27,8 @@
         <meta name="twitter:description" content="jQuery cheat sheet in HTML with links to the original API documentation. Created by Oscar Otero">
         <meta name="twitter:image" content="<?= $app->getUrl('jquery.png') ?>">
 
-        <link rel="stylesheet" href="<?= $app->getUrl('css/styles.css') ?>" type="text/css">
+        <link rel="stylesheet" href="<?= $app->getUrl('css/styles.css') ?>" type="text/css" media="screen">
+        <link rel="stylesheet" href="<?= $app->getUrl('css/styles-print.css') ?>" type="text/css" media="print">
         <script type="text/javascript" src="<?= $app->getUrl('js/main.js') ?>"></script>
     </head>
 
