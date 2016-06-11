@@ -85,6 +85,10 @@ versions:
     value: "1.10"
     source: "2.0.3"
 
+  - name:  "3.0"
+    value: "3.0"
+    source: "git"
+
 selectors:
   title: Selectors
   slug: selectors
@@ -483,6 +487,18 @@ attributes:
           doc: jQuery.cssHooks
           src: jQuery.cssHooks
           from: "1.4.3"
+
+        - text: jQuery.cssNumber
+          title: "An object containing all CSS properties that may be used without a unit. The .css() method uses this object to see if it may append px to unitless values.."
+          doc: jQuery.cssNumber
+          src: jQuery.cssNumber
+          from: "1.4.3"
+
+        - text:  jQuery.escapeSelector()
+          title: "Escapes any character that has a special meaning in a CSS selector."
+          doc: jQuery.escapeSelector
+          src: jQuery.escapeSelector
+          from: "3.0"
 
         - text: .hasClass()
           title: Determine whether any of the matched elements are assigned the given class.
