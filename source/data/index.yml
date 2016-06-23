@@ -431,6 +431,7 @@ selectors:
 
 attributes:
   title: Attributes / CSS
+  breaks: [3]
   slug: attributes
   sections:
 
@@ -967,6 +968,7 @@ events:
           src: jQuery.fn.error
           from: "1.0"
           deprecated: "1.8"
+          removed: "3.0"
 
         - text: .resize()
           title: "Bind an event handler to the 'resize' JavaScript event, or trigger that event on an element."
@@ -995,6 +997,7 @@ events:
           src: jQuery.fn.load
           from: "1.0"
           deprecated: "1.8"
+          removed: "3.0"
 
         - text: .ready()
           title: Specify a function to execute when the DOM is fully loaded.
@@ -1008,6 +1011,7 @@ events:
           src: jQuery.fn.unload
           from: "1.0"
           deprecated: "1.8"
+          removed: "3.0"
 
     - title: Event Handler Attachment
       items:
@@ -1567,7 +1571,7 @@ ajax:
 core:
   title: Core
   slug: core
-  breaks: [2,5]
+  breaks: [2,3]
   sections:
 
     - title: jQuery Object
@@ -1598,6 +1602,99 @@ core:
           doc: jQuery.when
           src: jQuery.when
           from: "1.5"
+
+    - title: Deferred Object
+      items:
+
+        - text: deferred.always()
+          title: Add handlers to be called when the Deferred object is either resolved or rejected.
+          doc: deferred.always
+          from: "1.6"
+
+        - text: deferred.done()
+          title: Add handlers to be called when the Deferred object is resolved.
+          doc: deferred.done
+          from: "1.5"
+
+        - text: deferred.fail()
+          title: Add handlers to be called when the Deferred object is rejected.
+          doc: deferred.fail
+          from: "1.5"
+
+        - text: deferred.isRejected()
+          title: Determine whether a Deferred object has been rejected.
+          doc: deferred.isRejected
+          from: "1.5"
+          deprecated: "1.7"
+          removed: "1.8"
+
+        - text: deferred.isResolved()
+          title: Determine whether a Deferred object has been resolved.
+          doc: deferred.isResolved
+          from: "1.5"
+          deprecated: "1.7"
+          removed: "1.8"
+
+        - text: deferred.notify()
+          title: Call the progressCallbacks on a Deferred object with the given args.
+          doc: deferred.notify
+          from: "1.7"
+
+        - text: deferred.notifyWith()
+          title: Call the progressCallbacks on a Deferred object with the given context and args.
+          doc: deferred.notifyWith
+          from: "1.7"
+
+        - text: deferred.pipe()
+          title: Utility method to filter and/or chain Deferreds.
+          doc: deferred.pipe
+          from: "1.6"
+          deprecated: "1.8"
+
+        - text: deferred.progress()
+          title: Add handlers to be called when the Deferred object generates progress notifications.
+          doc: deferred.progress
+          from: "1.7"
+
+        - text: deferred.promise()
+          title: "Return a Deferred's Promise object."
+          doc: deferred.promise
+          from: "1.5"
+
+        - text: deferred.reject()
+          title: Reject a Deferred object and call any failCallbacks with the given args.
+          doc: deferred.reject
+          from: "1.5"
+
+        - text: deferred.rejectWith()
+          title: Reject a Deferred object and call any failCallbacks with the given context and args.
+          doc: deferred.rejectWith
+          from: "1.5"
+
+        - text: deferred.resolve()
+          title: Resolve a Deferred object and call any doneCallbacks with the given args.
+          doc: deferred.resolve
+          from: "1.5"
+
+        - text: deferred.resolveWith()
+          title: Resolve a Deferred object and call any doneCallbacks with the given context and args.
+          doc: deferred.resolveWith
+          from: "1.5"
+
+        - text: deferred.state()
+          title: Determine the current state of a Deferred object.
+          doc: deferred.state
+          from: "1.7"
+
+        - text: deferred.then()
+          title: Add handlers to be called when the Deferred object is resolved or rejected.
+          doc: deferred.then
+          from: "1.5"
+
+        - text: .promise()
+          title: "Return a Promise object to observe when all actions of a certain type bound to the collection, queued or not, have finished."
+          doc: promise
+          from: "1.6"
 
     - title: Utilities
       items:
@@ -1737,6 +1834,7 @@ core:
           doc: jQuery.parseJSON
           src: jQuery.parseJSON
           from: "1.4.1"
+          deprecated: "3.0"
 
         - text: jQuery.parseXML()
           title: Parses a string into an XML document.
@@ -1774,6 +1872,13 @@ core:
           doc: jQuery.unique
           src: jQuery.unique
           from: "1.1.3"
+          deprecated: "3.0"
+
+        - text: jQuery.uniqueSort()
+          title: "Sorts an array of DOM elements, in place, with the duplicates removed. Note that this only works on arrays of DOM elements, not strings or numbers."
+          doc: jQuery.uniqueSort
+          src: jQuery.uniqueSort
+          from: "3.0"
 
     - title: DOM Element Methods
       items:
@@ -1818,6 +1923,7 @@ core:
           src: jQuery.fn.context
           from: "1.3"
           deprecated: "1-10"
+          removed: "3.0"
 
         - text: jQuery.error()
           title: Takes a string and throws an exception containing it.
@@ -1843,99 +1949,7 @@ core:
           src: jQuery.fn.selector
           from: "1.3"
           deprecated: "1.7"
-
-    - title: Deferred Object
-      items:
-
-        - text: deferred.always()
-          title: Add handlers to be called when the Deferred object is either resolved or rejected.
-          doc: deferred.always
-          from: "1.6"
-
-        - text: deferred.done()
-          title: Add handlers to be called when the Deferred object is resolved.
-          doc: deferred.done
-          from: "1.5"
-
-        - text: deferred.fail()
-          title: Add handlers to be called when the Deferred object is rejected.
-          doc: deferred.fail
-          from: "1.5"
-
-        - text: deferred.isRejected()
-          title: Determine whether a Deferred object has been rejected.
-          doc: deferred.isRejected
-          from: "1.5"
-          deprecated: "1.7"
-          removed: "1.8"
-
-        - text: deferred.isResolved()
-          title: Determine whether a Deferred object has been resolved.
-          doc: deferred.isResolved
-          from: "1.5"
-          deprecated: "1.7"
-          removed: "1.8"
-
-        - text: deferred.notify()
-          title: Call the progressCallbacks on a Deferred object with the given args.
-          doc: deferred.notify
-          from: "1.7"
-
-        - text: deferred.notifyWith()
-          title: Call the progressCallbacks on a Deferred object with the given context and args.
-          doc: deferred.notifyWith
-          from: "1.7"
-
-        - text: deferred.pipe()
-          title: Utility method to filter and/or chain Deferreds.
-          doc: deferred.pipe
-          from: "1.6"
-          deprecated: "1.8"
-
-        - text: deferred.progress()
-          title: Add handlers to be called when the Deferred object generates progress notifications.
-          doc: deferred.progress
-          from: "1.7"
-
-        - text: deferred.promise()
-          title: "Return a Deferred's Promise object."
-          doc: deferred.promise
-          from: "1.5"
-
-        - text: deferred.reject()
-          title: Reject a Deferred object and call any failCallbacks with the given args.
-          doc: deferred.reject
-          from: "1.5"
-
-        - text: deferred.rejectWith()
-          title: Reject a Deferred object and call any failCallbacks with the given context and args.
-          doc: deferred.rejectWith
-          from: "1.5"
-
-        - text: deferred.resolve()
-          title: Resolve a Deferred object and call any doneCallbacks with the given args.
-          doc: deferred.resolve
-          from: "1.5"
-
-        - text: deferred.resolveWith()
-          title: Resolve a Deferred object and call any doneCallbacks with the given context and args.
-          doc: deferred.resolveWith
-          from: "1.5"
-
-        - text: deferred.state()
-          title: Determine the current state of a Deferred object.
-          doc: deferred.state
-          from: "1.7"
-
-        - text: deferred.then()
-          title: Add handlers to be called when the Deferred object is resolved or rejected.
-          doc: deferred.then
-          from: "1.5"
-
-        - text: .promise()
-          title: "Return a Promise object to observe when all actions of a certain type bound to the collection, queued or not, have finished."
-          doc: promise
-          from: "1.6"
+          removed: "3.0"
 
     - title: Callbacks Object
       items:

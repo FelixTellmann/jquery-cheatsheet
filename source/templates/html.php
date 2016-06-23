@@ -90,9 +90,9 @@
 
         <div id="about" class="mfp-hide">
             <fieldset>
-                <strong>Open links:</strong>
-                <label><input type="radio" name="open_links" value="modal-window"> Modal window</label><br>
-                <label><input type="radio" name="open_links" value="new-window"> New window</label><br>
+                <h4>Open links:</h4>
+                <label><input type="radio" name="open_links" value="modal-window"> Modal window</label>
+                <label><input type="radio" name="open_links" value="new-window"> New window</label>
                 <label><input type="radio" name="open_links" value="same-window"> Same window</label>
             </fieldset>
 

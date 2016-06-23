@@ -472,16 +472,18 @@ fieldset, iframe {
     }
     fieldset {
         padding: 1rem;
+    }
 
-        strong {
-            display: block;
-            margin: 0 0 .5rem 0;
-            text-transform: uppercase;
-        }
-        label {
-            font-size: 0.8em;
-            padding: 5px 0;
-            cursor: pointer;
+    h4 {
+        margin: 0 0 1rem 0;
+    }
+    label {
+        font-size: 0.8em;
+        padding: 5px 0;
+        display: block;
+
+        > input {
+            margin-right: .3em;
         }
     }
     
@@ -489,6 +491,7 @@ fieldset, iframe {
         padding: 1rem;
         font-size: 0.8rem;
         border-top: solid 1px color(var(--black) tint(90%));
+        margin: 0;
 
         a {
             color: inherit;
