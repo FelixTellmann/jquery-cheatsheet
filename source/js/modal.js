@@ -56,14 +56,16 @@ define([
             $menu = $modal.find('> ul a');
 
             $menu.on('click', function (e) {
-                e.preventDefault();
-
                 var $this = $(this);
 
-                $menu.removeClass('selected');
-                $this.addClass('selected');
+                if ($this.attr('target') !== '_blank') {
+                    e.preventDefault();
 
-                $modal.find('iframe').attr('src', $this.attr('href'));
+                    $menu.removeClass('selected');
+                    $this.addClass('selected');
+
+                    $modal.find('iframe').attr('src', $this.attr('href'));
+                }
             });
         }
     }

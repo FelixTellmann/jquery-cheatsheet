@@ -102,7 +102,7 @@
         <div id="modal" class="mfp-hide">
             <ul>
                 <li class="link-api"><a href="">API doc</a></li>
-                <li class="link-src"><a href="http://james.padolsey.com/jquery/">Source viewer</a></li>
+                <li class="link-src"><a href="http://james.padolsey.com/jquery/" target="_blank">Source viewer</a></li>
             </ul>
             <div>
                 <iframe src="about:blank"></iframe>
