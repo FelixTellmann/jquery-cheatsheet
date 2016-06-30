@@ -69,7 +69,7 @@
             <a class="about" href="#about" id="about-link">About...</a>
         </header>
 
-        <div class="main-content">
+        <div class="main-content ly-horizontal">
             <?php
             $this->insert('article', $selectors);
             $this->insert('article', $attributes);
@@ -94,6 +94,12 @@
                 <label><input type="radio" name="open_links" value="modal-window"> Modal window</label>
                 <label><input type="radio" name="open_links" value="new-window"> New window</label>
                 <label><input type="radio" name="open_links" value="same-window"> Same window</label>
+            </fieldset>
+
+            <fieldset>
+                <h4>Layout:</h4>
+                <label><input type="radio" name="layout" value="horizontal"> Horizontal</label>
+                <label><input type="radio" name="layout" value="vertical"> Vertical</label>
             </fieldset>
 
             <p><a href="https://github.com/oscarotero/jquery-cheatsheet" title="Get the code from github">Source code</a> | by <a href="https://twitter.com/misteroom">@misteroom</a></p>

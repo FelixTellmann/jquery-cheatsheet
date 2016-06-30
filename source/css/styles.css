@@ -188,11 +188,15 @@ fieldset, iframe {
 /* Main content */
 .main-content {
     padding: 9.2rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
 
     article {
         flex-shrink: 0;
+        flex-grow: 1;
         background: white;
         margin-right: 1px;
+        margin-bottom: 1px;
 
         h1 {
             font-size: .9em;
@@ -279,8 +283,11 @@ fieldset, iframe {
     }
 
     @media (--desktop) {
-        display: flex;
         padding-top: 2.5rem;
+
+        &.ly-horizontal {
+            flex-wrap: nowrap;
+        }
     }
 }
 

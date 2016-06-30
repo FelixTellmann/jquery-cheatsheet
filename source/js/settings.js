@@ -3,7 +3,8 @@ define([
     'magnific-popup',
 ], function ($) {
     var settings = {
-        open_links: 'modal-window'
+        open_links: 'modal-window',
+        layout: 'horizontal'
     };
 
     return {
@@ -17,8 +18,13 @@ define([
 
             $settings.find(':radio').click(function () {
                 var $this = $(this);
+                var name = $this.attr('name');
 
-                settings[$this.attr('name')] = $this.val();
+                settings[name] = $this.val();
+
+                if (name === 'layout') {
+                    changeLayout(settings[name]);
+                }
 
                 localStorage.setItem('settings', JSON.stringify(settings));
             });
@@ -29,11 +35,25 @@ define([
                 $.extend(settings, JSON.parse(savedSettings));
             }
 
-            $settings.find(':radio[name="open_links"][value="' + settings.open_links + '"]').prop('checked', true);
+            $.each(settings, function (name, value) {
+                $settings.find(':radio[name="' + name + '"][value="' + value + '"]').prop('checked', true);
+
+                if (name === 'layout') {
+                    changeLayout(value);
+                }
+            });
         },
 
         getValue: function (name) {
             return settings[name];
+        }
+    };
+
+    function changeLayout(value) {
+        if (value === 'horizontal') {
+            $('.main-content').removeClass('ly-vertical').addClass('ly-horizontal');
+        } else {
+            $('.main-content').removeClass('ly-horizontal').addClass('ly-vertical');
         }
     }
 });
