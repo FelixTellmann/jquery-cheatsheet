@@ -66,7 +66,7 @@
                 </div>
             </div>
 
-            <a class="about" href="#about" id="about-link">About...</a>
+            <a class="about" href="#about" id="about-link">Preferences...</a>
         </header>
 
         <div class="main-content ly-horizontal">
