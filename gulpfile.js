@@ -91,25 +91,19 @@ gulp.task('html', function () {
 });
 
 gulp.task('sync', ['css', 'js'], function () {
-    sync.watch('source/**/*', function (event, file) {
-        switch (path.extname(file)) {
-            case '.yml':
-            case '.php':
-                sync.reload('*.html');
-                return;
-
-            default:
-                sync.reload(path.basename(file));
-                return;
-        }
+    gulp.watch('source/**/*.js', ['js']);
+    gulp.watch('source/**/*.css', ['css']);
+    gulp.watch('source/**/*.{jpg,png,gif,svg}', ['img']);
+    gulp.watch('source/**/*.{php,yml}', function (event) {
+        sync.reload();
+    });
+    gulp.watch('public/**/*', function (event) {
+        sync.reload(path.basename(event.path));
     });
 
     sync.init({
         proxy: process.env.APP_URL
     });
-
-    gulp.watch('source/**/*.js', ['js']);
-    gulp.watch('source/**/*.css', ['css']);
 });
 
 gulp.task('default', ['css', 'js', 'img', 'html', 'apache']);
