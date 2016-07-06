@@ -2,6 +2,13 @@
     <h2><?= $title ?></h2>
 
     <ul>
+    <?php
+    if (!empty($autosort)) {
+        usort($items, function ($a, $b) {
+            return ($a['text'] < $b['text']) ? -1 : 1;
+        });
+    }
+    ?>
     <?php foreach ($items as $item): ?>
         <?php 
         $class = 'v'.str_replace('.', '-', $item['from']);
