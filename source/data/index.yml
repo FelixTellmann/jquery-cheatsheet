@@ -840,6 +840,12 @@ traversing:
           src: jQuery.fn.add
           from: "1.0"
 
+        - text: .addBack()
+          title: "Add the previous set of elements on the stack to the current set, optionally filtered by a selector."
+          doc: addBack
+          src: jQuery.fn.addBack
+          from: "1.8"
+
         - text: .andSelf()
           title: Add the previous set of elements on the stack to the current set.
           doc: andSelf
@@ -867,12 +873,6 @@ traversing:
 
     - title: Tree Traversal
       items:
-
-        - text: .addBack()
-          title: "Add the previous set of elements on the stack to the current set, optionally filtered by a selector."
-          doc: addBack
-          src: jQuery.fn.addBack
-          from: "1.8"
 
         - text: .children()
           title: "Get the children of each element in the set of matched elements, optionally filtered by a selector."
@@ -984,12 +984,6 @@ events:
 
     - title: Document Loading
       items:
-
-        - text: .holdReady()
-          title: Holds or releases the execution of jQuery's ready event.
-          doc: jQuery.holdReady
-          src: jQuery.holdReady
-          from: "1.6"
 
         - text: .load()
           title: Bind an event handler to the 'load' JavaScript event.
@@ -1107,6 +1101,18 @@ events:
           src: jQuery.fn.focus
           from: "1.0"
 
+        - text: .focusin()
+          title: "Bind an event handler to the 'focusin' JavaScript event."
+          doc: focusin
+          src: jQuery.fn.focusin
+          from: "1.4"
+
+        - text: .focusout()
+          title: "Bind an event handler to the 'focusout' JavaScript event."
+          doc: focusout
+          src: jQuery.fn.focusout
+          from: "1.4"
+
         - text: .select()
           title: "Bind an event handler to the 'select' JavaScript event, or trigger that event on an element."
           doc: select
@@ -1149,23 +1155,17 @@ events:
           src: jQuery.fn.click
           from: "1.0"
 
+        - text: .contextMenu()
+          title: "Bind an event handler to the 'contextmenu' JavaScript event, or trigger that event on an element."
+          doc: contextmenu
+          src: jQuery.fn.contextmenu
+          from: "1.0"
+
         - text: .dblclick()
           title: "Bind an event handler to the 'dblclick' JavaScript event, or trigger that event on an element."
           doc: dblclick
           src: jQuery.fn.dblclick
           from: "1.0"
-
-        - text: .focusin()
-          title: "Bind an event handler to the 'focusin' JavaScript event."
-          doc: focusin
-          src: jQuery.fn.focusin
-          from: "1.4"
-
-        - text: .focusout()
-          title: "Bind an event handler to the 'focusout' JavaScript event."
-          doc: focusout
-          src: jQuery.fn.focusout
-          from: "1.4"
 
         - text: .hover()
           title: "Bind two handlers to the matched elements, to be executed when the mouse pointer enters and leaves the elements."
@@ -1231,6 +1231,11 @@ events:
           doc: event.currentTarget
           from: "1.3"
 
+        - text: event.delegateTarget
+          title: The element where the currently-called jQuery event handler was attached.
+          doc: event.delegateTarget
+          from: "1.7"
+
         - text: event.data
           title: The optional data passed to jQuery.fn.bind when the current executing handler was bound.
           doc: event.data
@@ -1250,6 +1255,11 @@ events:
           title: Returns whether event.stopPropagation() was ever called on this event object.
           doc: event.isPropagationStopped
           from: "1.3"
+
+        - text: event.metaKey
+          title: Indicates whether the META key was pressed when the event fired.
+          doc: event.metaKey
+          from: "1.0.4"
 
         - text: event.namespace
           title: The namespace specified when the event was triggered.
@@ -1387,6 +1397,12 @@ effects:
           doc: jQuery.fx.off
           src: jQuery.fx.off
           from: "1.3"
+
+        - text: jQuery.speed
+          title: Creates an object containing a set of properties ready to be used in the definition of custom animations.
+          doc: jQuery.speed
+          src: jQuery.speed
+          from: "1.0"
 
         - text: .queue()
           title: Show or manipulate the queue of functions to be executed on the matched elements.
@@ -1529,11 +1545,23 @@ ajax:
           src: jQuery.ajax
           from: "1.0"
 
+        - text: jQuery.prefilter()
+          title: Handle custom Ajax options or modify existing options before each request is sent and before they are processed by $.ajax().
+          doc: jQuery.ajaxPrefilter
+          src: jQuery.ajaxPrefilter
+          from: "1.5"
+
         - text: jQuery.ajaxSetup()
           title: Set default values for future Ajax requests.
           doc: jQuery.ajaxSetup
           src: jQuery.ajaxSetup
           from: "1.1"
+
+        - text: jQuery.ajaxTransport()
+          title: Creates an object that handles the actual transmission of Ajax data.
+          doc: jQuery.ajaxTransport
+          src: jQuery.ajaxTransport
+          from: "1.5"
 
     - title: Shorthand Methods
       items:
@@ -1556,16 +1584,16 @@ ajax:
           src: jQuery.getScript
           from: "1.0"
 
-        - text: .load()
-          title: Load data from the server and place the returned HTML into the matched element.
-          doc: load
-          src: jQuery.fn.load
-          from: "1.0"
-
         - text: jQuery.post()
           title: Load data from the server using a HTTP POST request.
           doc: jQuery.post
           src: jQuery.post
+          from: "1.0"
+
+        - text: .load()
+          title: Load data from the server and place the returned HTML into the matched element.
+          doc: load
+          src: jQuery.fn.load
           from: "1.0"
 
 core:
@@ -1597,6 +1625,12 @@ core:
           deprecated: "1.7"
           removed: "1.9"
 
+        - text: jQuery.holdReady()
+          title: Holds or releases the execution of jQuery's ready event.
+          doc: jQuery.holdReady
+          src: jQuery.holdReady
+          from: "1.6"
+
         - text: jQuery.when()
           title: "Provides a way to execute callback functions based on one or more objects, usually Deferred objects that represent asynchronous events."
           doc: jQuery.when
@@ -1605,6 +1639,11 @@ core:
 
     - title: Deferred Object
       items:
+
+        - text: jQuery.Deferred()
+          title: A factory function that returns a chainable utility object with methods to register multiple callbacks into callback queues, invoke callback queues, and relay the success or failure state of any synchronous or asynchronous function.
+          doc: jQuery.Deferred
+          from: "1.5"
 
         - text: deferred.always()
           title: Add handlers to be called when the Deferred object is either resolved or rejected.
@@ -1968,6 +2007,11 @@ core:
         - text: callbacks.disable()
           title: Disable a callback list from doing anything more.
           doc: callbacks.disable
+          from: "1.7"
+
+        - text: callbacks.disabled()
+          title: Determine if the callbacks list has been disabled.
+          doc: callbacks.disabled
           from: "1.7"
 
         - text: callbacks.empty()
