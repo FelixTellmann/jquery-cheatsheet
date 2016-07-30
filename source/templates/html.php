@@ -43,8 +43,8 @@
                 <div class="filter filter-version">
                     <select id="version" data-placeholder="Version...">
                         
-                        <?php foreach (array_reverse($versions) as $version): ?>
-                        <option data-source="<?= $version['source']; ?>" value="<?= $version['value'] ?>"><?= $version['name'] ?></option>
+                        <?php foreach (array_reverse($page->versions) as $version): ?>
+                        <option data-source="<?= $version->source ?>" value="<?= $version->value ?>"><?= $version->name ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
@@ -53,14 +53,14 @@
                     <select id="search" placeholder="Search...">
                         <option></option>
                         <?php
-                        $this->insert('options', $selectors);
-                        $this->insert('options', $attributes);
-                        $this->insert('options', $manipulation);
-                        $this->insert('options', $traversing);
-                        $this->insert('options', $events);
-                        $this->insert('options', $effects);
-                        $this->insert('options', $ajax);
-                        $this->insert('options', $core);
+                        $this->insert('options', ['section' => $page->selectors]);
+                        $this->insert('options', ['section' => $page->attributes]);
+                        $this->insert('options', ['section' => $page->manipulation]);
+                        $this->insert('options', ['section' => $page->traversing]);
+                        $this->insert('options', ['section' => $page->events]);
+                        $this->insert('options', ['section' => $page->effects]);
+                        $this->insert('options', ['section' => $page->ajax]);
+                        $this->insert('options', ['section' => $page->core]);
                         ?>
                     </select>
                 </div>
@@ -71,14 +71,14 @@
 
         <div class="main-content ly-horizontal">
             <?php
-            $this->insert('article', $selectors);
-            $this->insert('article', $attributes);
-            $this->insert('article', $manipulation);
-            $this->insert('article', $traversing);
-            $this->insert('article', $events);
-            $this->insert('article', $effects);
-            $this->insert('article', $ajax);
-            $this->insert('article', $core);
+            $this->insert('article', ['article' => $page->selectors]);
+            $this->insert('article', ['article' => $page->attributes]);
+            $this->insert('article', ['article' => $page->manipulation]);
+            $this->insert('article', ['article' => $page->traversing]);
+            $this->insert('article', ['article' => $page->events]);
+            $this->insert('article', ['article' => $page->effects]);
+            $this->insert('article', ['article' => $page->ajax]);
+            $this->insert('article', ['article' => $page->core]);
             ?>
         </div>
 

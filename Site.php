@@ -2,6 +2,8 @@
 
 use Psr7Middlewares\Middleware;
 use League\Plates\Engine;
+use Statico\Sources\StaticFiles;
+use Statico\Sources\YamlFiles;
 
 /**
  * Class to generate the site and serve files.
@@ -15,16 +17,14 @@ class Site extends Statico\Site
         $this->pipe(Middleware::errorHandler());
         $this->pipe(Middleware::formatNegotiator());
 
-        $templates = new Engine($this->getPath('source/templates'));
-        $templates->addData(['app' => $this]);
+        $this->source(new StaticFiles('build/**/*'))->build(false);
+        $this->source(new StaticFiles('source/files/*'));
 
-        $this->staticFiles('build/**/*')
-            ->build(false);
+        $plates = new Engine($this->getPath('source/templates'));
+        $plates->addData(['app' => $this]);
 
-        $this->staticFiles('source/files/*');
-
-        $this->yamlFiles('source/data/*.yml')
-            ->templates($templates)
-            ->pipe(Middleware::piwik('//oscarotero.com/piwik/')->addOption('disableCookies'));
+        $this->source(new YamlFiles('source/data/*.yml'))
+            ->templates($plates)
+            ->pipe(Middleware::piwik('//piwik.oscarotero.com/')->addOption('disableCookies'));
     }
 }
