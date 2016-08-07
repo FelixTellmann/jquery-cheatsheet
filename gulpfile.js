@@ -71,7 +71,6 @@ gulp.task('html', function () {
     gulp
         .src('build/**/*.html')
         .pipe(htmlmin({
-            removeComments: true,
             collapseWhitespace: true,
             collapseBooleanAttributes: true,
             removeAttributeQuotes: true,

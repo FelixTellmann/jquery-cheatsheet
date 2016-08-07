@@ -1,5 +1,12 @@
-
 <!DOCTYPE html>
+
+<!--
+Designed and developer by:
+┌─┐┌─┐┌─┐┌─┐┬─┐  ┌─┐┌┬┐┌─┐┬─┐┌─┐
+│ │└─┐│  ├─┤├┬┘  │ │ │ ├┤ ├┬┘│ │
+└─┘└─┘└─┘┴ ┴┴└─  └─┘ ┴ └─┘┴└─└─┘
+https://oscarotero.com
+-->
 
 <html lang="en">
     <head>
@@ -30,6 +37,11 @@
         <link rel="stylesheet" href="<?= $app->getUrl('css/styles.css') ?>" type="text/css" media="screen">
         <link rel="stylesheet" href="<?= $app->getUrl('css/styles-print.css') ?>" type="text/css" media="print">
         <script type="text/javascript" src="<?= $app->getUrl('js/main.js') ?>"></script>
+        <script>
+          if (document.childNodes[1].nodeType === 8) {
+            console.log(document.childNodes[1].nodeValue);
+          }
+        </script>
     </head>
 
     <body>
