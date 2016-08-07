@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!--
-Designed and developer by:
+Designed and developed by:
 ┌─┐┌─┐┌─┐┌─┐┬─┐  ┌─┐┌┬┐┌─┐┬─┐┌─┐
 │ │└─┐│  ├─┤├┬┘  │ │ │ ├┤ ├┬┘│ │
 └─┘└─┘└─┘┴ ┴┴└─  └─┘ ┴ └─┘┴└─└─┘
