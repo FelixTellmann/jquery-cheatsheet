@@ -5,7 +5,7 @@
         <div>
             <?php
             foreach ($article->sections as $k => $section) {
-                if (isset($breaks) && in_array($k, $breaks, true)) {
+                if (isset($article->breaks) && in_array($k, $article->breaks, true)) {
                     echo '</div><div>';
                 }
 
